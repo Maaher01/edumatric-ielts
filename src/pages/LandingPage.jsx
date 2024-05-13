@@ -1,3 +1,7 @@
+import Instructor from "../assets/images/instructor.jpg";
+import PeoplePoster from "../assets/images/people.png";
+import MockPoster from "../assets/images/mask.png";
+
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
@@ -35,49 +39,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* <section className="container">
-        <div className="row bg-light my-5" style={{ borderRadius: "24px" }}>
-          <div className="col-12">
-            <div className="my-4">
-              <ul className="list-inline fw-bold d-flex justify-content-around align-items-center">
-                <li className="list-inline-item fw-bold">
-                  <img
-                    src="https://1000.hellobarc.com/front/images/red-bullet.png"
-                    width={"25px"}
-                    style={{ marginRight: "10px" }}
-                  />
-                  Reading{" "}
-                </li>
-                <li className="list-inline-item fw-bold">
-                  <img
-                    src="https://1000.hellobarc.com/front/images/red-bullet.png"
-                    width={"25px"}
-                    style={{ marginRight: "10px" }}
-                  />
-                  Writing
-                </li>
-                <li className="list-inline-item fw-bold">
-                  <img
-                    src="https://1000.hellobarc.com/front/images/red-bullet.png"
-                    width={"25px"}
-                    style={{ marginRight: "10px" }}
-                  />
-                  Listening
-                </li>
-                <li className="list-inline-item fw-bold">
-                  <img
-                    src="https://1000.hellobarc.com/front/images/red-bullet.png"
-                    width={"25px"}
-                    style={{ marginRight: "10px" }}
-                  />
-                  Speaking
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="container">
         <div className="row my-5 rounded">
           <div className="col-12 my-3">
@@ -102,7 +63,7 @@ const LandingPage = () => {
                     <img
                       src="src/assets/images/tables-and-chairs.jpg"
                       rounded
-                      className="w-100 rounded"
+                      className="w-100 rounded img-thumbnail p-4"
                     />
                   </div>
                 </div>
@@ -117,7 +78,7 @@ const LandingPage = () => {
                     height: "100%",
                   }}
                 >
-                  <div className="card">
+                  <div className="">
                     <div className="card-body fs-5">
                       <p
                         className="card-text big_p px-2"
@@ -131,14 +92,15 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
+
             <div className="row flex-row-reverse">
               <div className="col-lg-6 col-sm-12">
                 <div className="pb-3">
-                  <div className="d-flex align-items-center justify-content-center">
+                  <div className="d-flex align-items-center  justify-content-center">
                     <img
                       src="src/assets/images/girl-writing.jpg"
                       rounded
-                      className="w-100 rounded"
+                      className="w-100 border rounded"
                     />
                   </div>
                 </div>
@@ -153,15 +115,15 @@ const LandingPage = () => {
                     height: "100%",
                   }}
                 >
-                  <div className="card">
+                  <div className="">
                     <div className="card-body fs-5">
                       <p
-                        className="card-text px-2"
+                        className="card-text big_p px-2"
                         style={{ fontSize: "1.75rem" }}
                       >
                         Edumatric এ মক টেস্ট দেয়ার জন্য থাকছে বাংলাদেশের
                         সবচেয়ে প্রিমিয়াম মক ভেন্যু যা ব্রিটিশ কাউন্সিল দ্বারা
-                        স্বীকৃত।
+                        স্বীকৃত
                       </p>
                     </div>
                   </div>
@@ -179,116 +141,30 @@ const LandingPage = () => {
               <div className="col-12">
                 <div className="text-center mt-2 mb-5">
                   <h2 className="fw-bold mb-3" style={{ fontSize: "2rem" }}>
-                    বাংলাদেশে এই প্রথম ফুল ফ্লেজ মক টেস্ট মাত্র ৯৯ টাকায়
+                    আমাদের মক টেস্ট ভেন্যুতে আপনি যা যা পাচ্ছেন
                   </h2>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="row">
-            <div className="wrap_custom">
-              <div className="d-flex gap-4">
-                <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                  <div className="pb-3">
-                    <div className="d-flex align-items-center justify-content-center">
-                      <p
-                        className="card-text px-2 pt-3"
-                        style={{ fontSize: "1.75rem" }}
-                      >
-                        একদম IELTS এর মত পরিবেশ
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                  <div>
-                    <p
-                      className="card-text px-2 pt-3"
-                      style={{ fontSize: "1.75rem" }}
-                    >
-                      ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="d-flex gap-4 mt-4">
-                <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                  <div className="pb-3">
-                    <div className="d-flex align-items-center justify-content-center">
-                      <p
-                        className="card-text px-2 pt-3"
-                        style={{ fontSize: "1.75rem" }}
-                      >
-                        পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                  <div>
-                    <p
-                      className="card-text px-2 pt-3"
-                      style={{ fontSize: "1.75rem" }}
-                    >
-                      আপনার IELTS ব্যান্ড স্কোর
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <div className="facility__container">
+            <div className="facility_item">
+              <h3>একদম IELTS এর মত পরিবেশ</h3>
+            </div>
+            <div className="facility_item">
+              <h3>ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)</h3>
             </div>
           </div>
 
-          {/* <div className="row">
-            <div className="row gap-4">
-              <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                <div className="pb-3">
-                  <div className="d-flex align-items-center justify-content-center">
-                    <p
-                      className="card-text px-2 pt-3"
-                      style={{ fontSize: "1.75rem" }}
-                    >
-                      একদম IELTS এর মত পরিবেশ
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                <div>
-                  <p
-                    className="card-text px-2 pt-3"
-                    style={{ fontSize: "1.75rem" }}
-                  >
-                    ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)
-                  </p>
-                </div>
-              </div>
+          <div className="facility__container">
+            <div className="facility_item">
+              <h3>পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন</h3>
             </div>
-            <div className="row gap-4 mt-4">
-              <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                <div className="pb-3">
-                  <div className="d-flex align-items-center justify-content-center">
-                    <p
-                      className="card-text px-2 pt-3"
-                      style={{ fontSize: "1.75rem" }}
-                    >
-                      পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
-                <div>
-                  <p
-                    className="card-text px-2 pt-3"
-                    style={{ fontSize: "1.75rem" }}
-                  >
-                    আপনার IELTS ব্যান্ড স্কোর
-                  </p>
-                </div>
-              </div>
+            <div className="facility_item">
+              <h3>আপনার IELTS ব্যান্ড স্কোর</h3>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
 
@@ -299,334 +175,159 @@ const LandingPage = () => {
               <div className="col-lg-12 col-md-12">
                 <div className="text-center my-4">
                   <h2 className="fw-bold" style={{ fontSize: "3rem" }}>
-                    যারা যারা থাকবেন আপনার মক টেস্ট এর জন্য
+                    যারা যারা থাকবেন আপনার মক <br /> টেস্ট এর জন্য
                   </h2>
                 </div>
               </div>
             </div>
-            <div className="row gap-4 py-4 text-center">
-              <div className="col-lg-4 bg-dark-subtle p-4 rounded-pill"></div>
-              <div className="col-lg-4 bg-dark-subtle p-4 rounded-pill"></div>
-              <div className="col-lg-4 bg-dark-subtle p-4 rounded-pill"></div>
-              {/* <div className="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-xs-12" /> */}
-              {/* <div className="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-xs-12">
-                <ul>
-                  <li className="d-flex justify-content-start">
-                    <i className="fa-solid fa-check fs-5 mt-1" />
-                    <p
-                      className="mx-3"
-                      style={{ lineHeight: "1.5rem", fontSize: "1.2rem" }}
-                    >
-                      ইশরাক হাসনাইন, IELTS in charge, Edumatric
-                    </p>
-                  </li>
-                  <li className="d-flex justify-content-start">
-                    <i className="fa-solid fa-check fs-5 mt-1" />
-                    <p
-                      className="mx-3"
-                      style={{ lineHeight: "1.5rem", fontSize: "1.2rem" }}
-                    >
-                      ওয়ালিদ রহমান, Academic Head, Edumatric
-                    </p>
-                  </li>
-                  <li className="d-flex justify-content-start">
-                    <i className="fa-solid fa-check fs-5 mt-1" />
-                    <p
-                      className="mx-3"
-                      style={{ lineHeight: "1.5rem", fontSize: "1.2rem" }}
-                    >
-                      ফাইয়াজ, Senior IELTS Instructor, Edumatric
-                    </p>
-                  </li>
-                </ul>
-              </div> */}
-              {/* <div className="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-xs-12" /> */}
-            </div>
+          </div>
+        </div>
+
+        {/* Instructor section */}
+        <div className="instructor_sec">
+          <div className="instructor_info">
+            <img src={Instructor} alt="instructor" />
+
+            <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
+            <p className="text-center">Academic Head, Edumatric</p>
+          </div>
+
+          <div className="instructor_info">
+            <img src={Instructor} alt="instructor" />
+
+            <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
+            <p className="text-center">Academic Head, Edumatric</p>
+          </div>
+
+          <div className="instructor_info">
+            <img src={Instructor} alt="instructor" />
+
+            <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
+            <p className="text-center">Academic Head, Edumatric</p>
           </div>
         </div>
       </section>
 
-      <section className="container">
-        <div className="row  bg_wrapper my-5 align-middle">
-          <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12 ">
-            <img
-              src="https://1000.hellobarc.com/front/images/hajar-manush.png"
-              className="w-100"
-              style={{ borderRadius: 24 }}
-            />
-          </div>
-          <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12 my-5">
-            <div>
-              <div>
-                <h3 className="card-text big_p text-center">
-                  Edumatric এর Full Mock Test এর মূল্য ৫০০ টাকা
-                </h3>
-              </div>
-              <div className="mb-3 mt-5">
-                <h2 className="fw-bold text-center">
-                  কিন্তু বিশেষ প্রমোশনাল প্রাইসে আপনি পাচ্ছেন মাত্র ৯৯ টাকায়।
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <h2 className="text-center pt-4 pb-4">
+        Edumatric এর Full Mock Test
+        <span className="fw-bold"> এর মূল্য ৫০০ টাকা</span>
+      </h2>
 
-      <section className="container">
-        <div className=" bg-light px-3 rounded">
-          <div className="row bg-wrapper align-items-center flex-row-reverse">
-            <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12">
-              <div className="my-3">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    src="https://1000.hellobarc.com/front/images/need_more.jpg"
-                    className="w-100 rounded"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12 align-items-center">
-              <div className="">
-                <div className="mb-4 mt-4">
-                  <h2 className="fw-bold text-center">
-                    ফ্রি মক টেস্ট vs Edumatric এর মক টেস্ট
-                  </h2>
-                </div>
-                <div className="mb-5">
-                  <ul className="card-text px-md-5">
-                    <li className="mb-2">
-                      Edumatric এ British Council দ্বারা দ্বীকৃত মক ভ্যানু
-                      যেখানে main IELTS conduct করা হয়।
-                    </li>
-                    <li className="mb-2">
-                      Main IELTS এ যে ধরনের পরিবেশ পাবেন Edumatric এও একই রকম
-                      পরিবেশ পাবেন
-                    </li>
-                    <li className="mb-2">
-                      এখানে দক্ষ এবং অভিজ্ঞ এক্সপার্ট দ্বারা কপি চেক করানো হয়
-                      তাই - মক এর রেজাল্ট ঠিক IELTS এর রেজাল্ট এর মতই হয়।
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {/* <div className="row">
-            <div className="col-md-6 col-xs-12 mx-auto">
-              <button
-                className="btn fw-bold"
-                style={{ background: "#00a651", color: "white" }}
-              >
-                {" "}
-                আপনিও রেজিস্ট্রেশন করুন
-              </button>
-            </div>
-          </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
+      <h2 className="text-center pb-3">
+        কিন্তু বিশেষ প্রমোশনাল প্রাইসে <br />
+        <span className="fw-bold"> আপনি পাচ্ছেন মাত্র ৯৯ টাকায়</span>
+      </h2>
 
-      <section className="container mt-4">
-        <div className=" bg-light px-3 rounded">
-          <div className="row bg-wrapper align-items-center ">
-            <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12">
-              <div className="my-3">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    src="https://1000.hellobarc.com/front/images/think.jpg"
-                    className="w-100 rounded"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 align-items-center">
-              <div className="">
-                <div className="mb-4 mt-4">
-                  <h2 className="fw-bold text-center">
-                    এই অফারে মক টেস্ট নিলে আরো যে সকল সুবিধা পাচ্ছেন।
-                  </h2>
-                </div>
-                <div className="mb-5">
-                  <ul className="card-text px-md-5">
-                    <li className="mb-2">মাত্র ১০০ টাকায় IELTS Masterclass</li>
-                    <li className="mb-2">
-                      ৩ মাসের IELTS course এ ১০০০ টাকা Instant Cashback
-                    </li>
-                    <li className="mb-2">
-                      IELTS registration এ ৫০০ টাকা cashback
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="people_poster">
+        <img src={PeoplePoster} alt="poster" />
+      </div>
 
-      <section className="container">
-        <div className=" bg-light px-3 rounded mt-5">
-          <div className="row bg-wrapper align-items-center flex-row-reverse">
-            <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12">
-              <div className="my-3">
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    src="https://1000.hellobarc.com/front/images/need_more.jpg"
-                    className="w-100 rounded"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6  col-sm-12 col-xs-12 align-items-center">
-              <div className="">
-                <div className="mb-4 mt-4">
-                  <h2 className="fw-bold">
-                    যাদের বন্ধুর সংখ্যা বেশি তাদের জন্য যা থাকছে:
-                  </h2>
-                </div>
-                <div className="mb-5">
-                  <ul className="card-text px-md-5">
-                    <li className="mb-2">
-                      ৩ জন একসাথে রেজিস্ট্রেশন করলে অতিরিক্ত ১ জন ফ্রি মক টেস্ট
-                      দিতে পারবেন
-                    </li>
-                    <li className="mb-2">
-                      ৩ জন একসাথে রেজিস্ট্রেশন করলে অতিরিক্ত বন্ধু সহ মোট ৪ জন
-                      ফ্রি master class এ জয়েন করতে পারবেন।
-                    </li>
-                    <li className="mb-2">
-                      এ অফার পাবার জন্য অবশ্যই আমাদের হটলাইনে ফোন দিয়ে কনফার্ম
-                      করতে হবে
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {/* <div className="row">
-            <div className="col-md-6 col-xs-12 mx-auto">
-              <button
-                className="btn fw-bold"
-                style={{ background: "#00a651", color: "white" }}
-              >
-                {" "}
-                আপনিও রেজিস্ট্রেশন করুন
-              </button>
-            </div>
-          </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
+      <h2 className="text-center fw-bold">
+        ফ্রি মক টেস্ট vs Edumatric এর <br /> মক টেস্ট
+      </h2>
 
-      <section className="container">
-        <div className="row bg-light bg-wrapper mt-5 rounded">
-          <div className="col-lg-12 col-md-12  col-sm-12 col-xs-12">
-            <div className="row">
-              <div className="col-lg-12 col-md-12">
-                <div className="text-center mt-4 mb-3">
-                  <h2 className="fw-bold">Register Now</h2>
-                </div>
-                <div className="text-center fw-bold">
-                  <p>Mock Test 99 taka</p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
-                <div className="pb-2">
-                  <div className="card" style={{ marginBottom: 8 }}>
-                    <div className="card-body">
-                      <p className="card-text text-center">
-                        10 am (10 seats left)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
-                <div className="pb-2">
-                  <div className="card" style={{ marginBottom: 8 }}>
-                    <div className="card-body">
-                      <p className="card-text text-center">
-                        1 pm (15 seats left)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
-                <div className="pb-2">
-                  <div className="card" style={{ marginBottom: 8 }}>
-                    <div className="card-body">
-                      <p className="card-text text-center">
-                        4 pm (9 seat left)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="test__container">
+        <div className="test__item">
+          <h3 className="text-center">
+            Edumatric একটি British Council দ্বারা দ্বীকৃত মক ভ্যানু যেখানে main
+            IELTS conduct করা হয়।
+          </h3>
+        </div>
+
+        <div className="test__item">
+          <h3 className="text-center">
+            Main IELTS এ যে ধরনের পরিবেশ পাবেন Edumatric এও একই রকম পরিবেশ পাবেন
+          </h3>
+        </div>
+
+        <div className="test__item">
+          <h3 className="text-center">
+            এখানে দক্ষ এবং অভিজ্ঞ এক্সপার্ট দ্বারা কপি চেক করানো হয় তাই - মক এর
+            রেজাল্ট ঠিক IELTS এর রেজাল্ট এর মতই হয়
+          </h3>
+        </div>
+      </div>
+
+      <div className="reg__button">
+        <button className="btn btn-success">রেজিস্ট্রেশন করতে চাই</button>
+      </div>
+
+      <h2 className="text-center mt-4 fw-bold">
+        এই অফারে মক টেস্ট নিলে <br /> আরো যে সকল সুবিধা পাচ্ছেন
+      </h2>
+
+      <div className="mock__test">
+        <div className="mock__poster">
+          <img src={MockPoster} alt="MockPoster" />
+        </div>
+        <div className="mock__content">
+          <div className="test__item">
+            <h3 className="text-center">মাত্র ১০০ টাকায় IELTS Masterclass</h3>
           </div>
-          <div className="col-lg-12 col-md-12  col-sm-12 col-xs-12 mt-4">
-            <div className="row">
-              <div className="col-lg-12 col-md-12">
-                <div className="text-center fw-bold">
-                  <p>IELTS Masterclass 100 taka</p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
-                <div className="pb-2">
-                  <div className="card" style={{ marginBottom: 8 }}>
-                    <div className="card-body">
-                      <p className="card-text text-center">19 May</p>
-                    </div>
-                  </div>
-                  <div className="card" style={{ marginBottom: 8 }}>
-                    <div className="card-body">
-                      <p className="card-text text-center">24 May</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12 col-md-12  col-sm-12 col-xs-12">
-                <div className="mx-auto mb-4 pb-2 px-2 w-50 d-flex justify-content-center mt-4">
-                  <Link to="/payment">
-                    <button
-                      className="btn fw-bold"
-                      style={{ background: "#00a651", color: "white" }}
-                    >
-                      রেজিস্ট্রেশন করুন
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
+
+          <div className="test__item">
+            <h3 className="text-center">
+              ৩ মাসের IELTS course এ ১০০০ টাকা Instant cashback
+            </h3>
+          </div>
+
+          <div className="test__item">
+            <h3 className="text-center">
+              IELTS registration এ ৫০০ টাকা cashback
+            </h3>
           </div>
         </div>
-      </section>
+      </div>
+
+      <h2 className="text-center fw-bold mt-5">
+        যাদের বন্ধুর সংখ্যা বেশি তাদের <br /> জন্য যা যা থাকছে
+      </h2>
+
+      <div className="test__container">
+        <div className="test__item">
+          <h3 className="text-center">
+            ৩ জন একসাথে রেজিস্ট্রেশন করলে অতিরিক্ত ১ জন ফ্রি মক টেস্ট দিতে
+            পারবেন
+          </h3>
+        </div>
+
+        <div className="test__item">
+          <h3 className="text-center">
+            ৩ জন একসাথে রেজিস্ট্রেশন করলে অতিরিক্ত বন্ধু সহ মোট ৪ জন ফ্রি master
+            class এ জয়েন করতে পারবেন
+          </h3>
+        </div>
+
+        <div className="test__item">
+          <h3 className="text-center">
+            এ অফার পাবার জন্য অবশ্যই আমাদের হটলাইনে ফোন দিয়ে কনফার্ম করতে হবে
+          </h3>
+        </div>
+      </div>
+
+      <h2 className="text-center text-success fw-bold">
+        Hotline Number: 01990000000
+      </h2>
+
+      <div className="reg__big mt-4">
+        <button className="btn btn-success btn-lg">Register Now</button>
+      </div>
+
+      <div className="venue">
+        <div className="venue__sec">
+          <h2 className="fw-bold">Mock Venue</h2>
+          <p>
+            Mogbajar Address <br /> Location: <br /> Phone number:
+          </p>
+        </div>
+        <div className="office__sec">
+          <h2 className="fw-bold">Head Office</h2>
+          <p>
+            Gulshan Address <br /> Location: <br />
+            Phone number:
+          </p>
+        </div>
+      </div>
 
       <div className="container mb-5">
         <h2 className="mt-5 mb-4 fw-bold">FAQ</h2>

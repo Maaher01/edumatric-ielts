@@ -3,6 +3,7 @@ import Instructor from "../assets/images/instructor.jpg";
 import "../index.css";
 
 const PaymentNotice = () => {
+  const price = "১০,০০০ > ৪৯০০ > ৩৯০০";
   return (
     <>
       <div className="row justify-content-center mt-5">
@@ -96,7 +97,7 @@ const PaymentNotice = () => {
       </div>
 
       <h2 className="text-center fw-bold">রেজিস্ট্রেশন ফি</h2>
-      <h2 className="text-center fw-bold">১০,০০০ > ৪৯০০ > ৩৯০০ </h2>
+      <h2 className="text-center fw-bold"> {price} </h2>
       <p className="text-center h4 pb-4">
         (শুধুমাত্র যারা মক টেস্ট কিনবেন তাদের জন্য)
       </p>

@@ -286,24 +286,101 @@ input.largerCheckbox {
   margin: 0 auto;
 }
 
-/* @media screen and (max-width: 1524px) {
-  .sit_info {
+.people_poster {
+  max-width: 700px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.people_poster img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* test container */
+.test__container {
+  max-width: 750px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.test__item {
+  margin-top: 20px;
+  background-color: rgb(179, 175, 175);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.test__item h3 {
+  font-size: 22px;
+}
+
+.reg__button {
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.reg__big {
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.venue {
+  max-width: 550px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.venue__sec p {
+  font-size: 18px;
+}
+
+.office__sec p {
+  font-size: 18px;
+}
+
+.mock__test {
+  max-width: 750px;
+  margin: 20px auto;
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 850px) {
+  .mock__test {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
-    margin: 0 auto;
-    border: 1px solid black;
   }
+}
 
-  .sit_content {
-    border: 1px solid black;
-    max-width: 900px;
-  }
+.mock__poster {
+  flex: 6;
+  max-width: 550px;
+  height: auto;
+}
 
-  .sit_content > h2 {
-    font-size: 20px;
-  }
-} */
+.mock__poster img {
+  height: 100%;
+  width: 100%;
+}
+
+.mock__content {
+  flex: 6;
+}
+
+.facility__container {
+  max-width: 850px;
+  margin: 5px auto;
+  display: flex;
+  gap: 20px;
+}
+
+.facility_item {
+  background-color: rgb(212, 208, 208);
+  border-radius: 15px;
+  padding: 10px;
+}
 
 @media screen and (max-width: 640px) {
   .instructor_sec {
