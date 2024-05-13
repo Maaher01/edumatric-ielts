@@ -1,5 +1,5 @@
 import "../index.css";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { baseUrl } from "../api/api";
@@ -10,43 +10,27 @@ const PaymentConfirm = () => {
 
   const [masterClassChecked, setMasterClassChecked] = useState(true);
   const [totalbill, setTotalBill] = useState(0);
+  const [paymentstatus, setPaymentStatus] = useState("");
 
   useEffect(() => {
-    const calculateTotal = () => {
-      let total = 99;
-      if (masterClassChecked) total += 100;
-      setTotalBill(total);
-      // return total;
-    };
-
     calculateTotal();
-  }, []);
+  }, [masterClassChecked]);
 
-  // const getStudentInfo = async () => {
-  //   try {
-  //     const response = await axios.get(`${baseUrl}/studentinfo/edit/${id}`);
-
-  //     setTotalBill(response.data.data._totalbill);
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-
-  // const calculateTotal = () => {
-  //   let total = 99;
-  //   if (masterClassChecked) total += 100;
-  //   return total;
-  // };
+  const calculateTotal = () => {
+    let total = 99;
+    if (masterClassChecked) total += 100;
+    setTotalBill(total);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData();
 
     formData.append("totalbill", totalbill);
 
     try {
       const response = await axios.post(
-        `${baseUrl}/studentinfo/update/${id}`,
+        `${baseUrl}/studentinfo/updatePayment/${id}`,
         formData
       );
       console.log(response);
@@ -87,7 +71,7 @@ const PaymentConfirm = () => {
           className="amount_price fw-bold"
           name="totalbill"
           value={totalbill}
-          onChange={(e) => setTotalBill(e.target.value)}
+          type="text"
         />
       </div>
 
