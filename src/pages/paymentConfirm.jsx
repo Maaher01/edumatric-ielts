@@ -10,7 +10,6 @@ const PaymentConfirm = () => {
 
   const [masterClassChecked, setMasterClassChecked] = useState(true);
   const [totalbill, setTotalBill] = useState(0);
-  const [paymentstatus, setPaymentStatus] = useState("");
 
   useEffect(() => {
     calculateTotal();
