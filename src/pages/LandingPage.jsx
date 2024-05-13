@@ -4,30 +4,21 @@ const LandingPage = () => {
   return (
     <>
       <section className="container">
-        <div className="row bg-light my-5 rounded">
+        <div className="row my-5 rounded">
           <div className="col-md-6 col-sm-12">
             <div className="mw-100 mh-100 overflow-hidden">
               <img
-                src="https://admin.edumatric.com/uploads/companyimage/8VoXjC8bcT4soNjPDt1p1PBpsQB7F8GwnJW3Ywe7.png"
+                src="src/assets/images/Home Page image.jpg"
                 className="w-100 h-100 rounded"
               />
             </div>
           </div>
           <div className="col-md-6 col-sm-12 p-5">
-            <div className="text-center">
+            <div>
               <h2 className="fw-bold fs-1">৯৯ টাকায় মক টেস্ট!</h2>
               <h3>এটা কি আদৌ সত্যি?</h3>
               <div className="my-4">
-                <p className="mb-1">
-                  আমি এত কিছু জানতে চাই না রেজিস্ট্রেশন করতে চাই
-                </p>
-                <p className="mb-1">
-                  বাংলাদেশে এই প্রথম ফুল ফ্লেজ মক টেস্ট মাত্র ৯৯ টাকায়
-                </p>
-                <p className="mb-1">
-                  এই ৯৯ টাকার মক টেস্টে আপনি পাচ্ছেন IELTS এর ৪টি মডিউলে ফুল
-                  ফ্লেয IELTS ready টেস্ট
-                </p>
+                <p className="mb-1">আমি এত কিছু জানতে চাই না</p>
               </div>
               <div className="d-grid">
                 <Link to="/payment">
@@ -35,7 +26,7 @@ const LandingPage = () => {
                     className="btn fw-bold"
                     style={{ background: "#00a651", color: "white" }}
                   >
-                    রেজিস্ট্রেশন করুন
+                    রেজিস্ট্রেশন করতে চাই
                   </button>
                 </Link>
               </div>
@@ -44,7 +35,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section className="container">
+      {/* <section className="container">
         <div className="row bg-light my-5" style={{ borderRadius: "24px" }}>
           <div className="col-12">
             <div className="my-4">
@@ -85,21 +76,21 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="container">
-        <div className="row bg-light my-5 rounded">
+        <div className="row my-5 rounded">
           <div className="col-12 my-3">
             <div className="row">
               <div className="col-12">
                 <div className="text-center mt-2 mb-5">
-                  <h2 className="fw-bold mb-3">
-                    বাংলাদেশে শুধুমাত্র Edumatric এই পাবেন ৯৯ টাকায় মক টেস্ট।
+                  <h2 className="fw-bold mb-3" style={{ fontSize: "2.5rem" }}>
+                    বাংলাদেশে এই প্রথম ফুল ফ্লেজ মক টেস্ট মাত্র ৯৯ টাকায়
                   </h2>
-                  <h5>
-                    Edumatric এ মক টেস্ট দেয়ার জন্য থাকছে বাংলাদেশের সবচেয়ে
-                    প্রিমিয়াম মক ভেন্যু যা ব্রিটিশ কাউন্সিল দ্বারা স্বীকৃত।
-                  </h5>
+                  <h3 className="mt-5">
+                    এই ৯৯ টাকার মক টেস্টে আপনি পাচ্ছেন IELTS এর ৪টি মডিউলে ফুল
+                    ফ্লেয IELTS ready টেস্ট
+                  </h3>
                 </div>
               </div>
             </div>
@@ -109,7 +100,7 @@ const LandingPage = () => {
                 <div className="pb-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <img
-                      src="https://1000.hellobarc.com/front/images/main-image.jpg"
+                      src="src/assets/images/tables-and-chairs.jpg"
                       rounded
                       className="w-100 rounded"
                     />
@@ -126,17 +117,52 @@ const LandingPage = () => {
                     height: "100%",
                   }}
                 >
-                  <div className="card" style={{ borderRadius: 30 }}>
+                  <div className="card">
                     <div className="card-body fs-5">
-                      <p className="card-text big_p px-2 text-center">
-                        আমাদের মক টেস্ট ভেন্যুতে আপনি যা যা পাচ্ছেন:
+                      <p
+                        className="card-text big_p px-2"
+                        style={{ fontSize: "1.75rem" }}
+                      >
+                        বাংলাদেশে শুধুমাত্র Edumatric এই পাবেন ৯৯ টাকায় মক
+                        টেস্ট।
                       </p>
-                      <ul>
-                        <li>একদম IELTS এর মত পরিবেশ।</li>
-                        <li>ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)</li>
-                        <li>পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন</li>
-                        <li>আপনার IELTS ব্যান্ড স্কোর</li>
-                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row flex-row-reverse">
+              <div className="col-lg-6 col-sm-12">
+                <div className="pb-3">
+                  <div className="d-flex align-items-center justify-content-center">
+                    <img
+                      src="src/assets/images/girl-writing.jpg"
+                      rounded
+                      className="w-100 rounded"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 col-sm-12">
+                <div
+                  className="pb-2"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "100%",
+                  }}
+                >
+                  <div className="card">
+                    <div className="card-body fs-5">
+                      <p
+                        className="card-text px-2"
+                        style={{ fontSize: "1.75rem" }}
+                      >
+                        Edumatric এ মক টেস্ট দেয়ার জন্য থাকছে বাংলাদেশের
+                        সবচেয়ে প্রিমিয়াম মক ভেন্যু যা ব্রিটিশ কাউন্সিল দ্বারা
+                        স্বীকৃত।
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -147,20 +173,143 @@ const LandingPage = () => {
       </section>
 
       <section className="container">
-        <div className="row bg-light bg-wrapper my-5 rounded">
+        <div className="row my-5 rounded">
+          <div className="col-12 my-3">
+            <div className="row">
+              <div className="col-12">
+                <div className="text-center mt-2 mb-5">
+                  <h2 className="fw-bold mb-3" style={{ fontSize: "2rem" }}>
+                    বাংলাদেশে এই প্রথম ফুল ফ্লেজ মক টেস্ট মাত্র ৯৯ টাকায়
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="wrap_custom">
+              <div className="d-flex gap-4">
+                <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                  <div className="pb-3">
+                    <div className="d-flex align-items-center justify-content-center">
+                      <p
+                        className="card-text px-2 pt-3"
+                        style={{ fontSize: "1.75rem" }}
+                      >
+                        একদম IELTS এর মত পরিবেশ
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                  <div>
+                    <p
+                      className="card-text px-2 pt-3"
+                      style={{ fontSize: "1.75rem" }}
+                    >
+                      ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex gap-4 mt-4">
+                <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                  <div className="pb-3">
+                    <div className="d-flex align-items-center justify-content-center">
+                      <p
+                        className="card-text px-2 pt-3"
+                        style={{ fontSize: "1.75rem" }}
+                      >
+                        পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                  <div>
+                    <p
+                      className="card-text px-2 pt-3"
+                      style={{ fontSize: "1.75rem" }}
+                    >
+                      আপনার IELTS ব্যান্ড স্কোর
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="row">
+            <div className="row gap-4">
+              <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                <div className="pb-3">
+                  <div className="d-flex align-items-center justify-content-center">
+                    <p
+                      className="card-text px-2 pt-3"
+                      style={{ fontSize: "1.75rem" }}
+                    >
+                      একদম IELTS এর মত পরিবেশ
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                <div>
+                  <p
+                    className="card-text px-2 pt-3"
+                    style={{ fontSize: "1.75rem" }}
+                  >
+                    ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="row gap-4 mt-4">
+              <div className="col-lg-8 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                <div className="pb-3">
+                  <div className="d-flex align-items-center justify-content-center">
+                    <p
+                      className="card-text px-2 pt-3"
+                      style={{ fontSize: "1.75rem" }}
+                    >
+                      পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-12 bg-dark-subtle p-4 rounded-pill">
+                <div>
+                  <p
+                    className="card-text px-2 pt-3"
+                    style={{ fontSize: "1.75rem" }}
+                  >
+                    আপনার IELTS ব্যান্ড স্কোর
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div> */}
+        </div>
+      </section>
+
+      <section className="container">
+        <div className="row bg-wrapper my-5 rounded">
           <div className="col-lg-12 col-md-12  col-sm-12 col-xs-12">
             <div className="row">
               <div className="col-lg-12 col-md-12">
                 <div className="text-center my-4">
-                  <h2 className="fw-bold">
+                  <h2 className="fw-bold" style={{ fontSize: "3rem" }}>
                     যারা যারা থাকবেন আপনার মক টেস্ট এর জন্য
                   </h2>
                 </div>
               </div>
             </div>
-            <div className="row py-4 justify-content-center text-center">
+            <div className="row gap-4 py-4 text-center">
+              <div className="col-lg-4 bg-dark-subtle p-4 rounded-pill"></div>
+              <div className="col-lg-4 bg-dark-subtle p-4 rounded-pill"></div>
+              <div className="col-lg-4 bg-dark-subtle p-4 rounded-pill"></div>
               {/* <div className="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-xs-12" /> */}
-              <div className="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-xs-12">
+              {/* <div className="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-xs-12">
                 <ul>
                   <li className="d-flex justify-content-start">
                     <i className="fa-solid fa-check fs-5 mt-1" />
@@ -190,7 +339,7 @@ const LandingPage = () => {
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               {/* <div className="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-xs-12" /> */}
             </div>
           </div>

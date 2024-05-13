@@ -1,109 +1,98 @@
+import axios from "axios";
+import { baseUrl } from "../api/api";
+import "../index.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 const PaymentPage = () => {
+  const navigate = useNavigate();
+  const [district, setDistrict] = useState();
+  const [eventdate, setEventDate] = useState("");
+
+  const handleChangedistrict = (event) => {
+    setDistrict(event.target.value);
+  };
+
+  const handleEventDate = (event) => {
+    setEventDate(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+
+      const formData = new FormData(event.currentTarget);
+
+      formData.append("district", district);
+      formData.append("eventdate", eventdate);
+
+      const response = await axios.post(`${baseUrl}/studentinfo/add`, formData);
+
+      navigate(`/payment-confirm/${response.data.profile.id}`);
+    } catch (error) {
+      console.error("There was an error:", error);
+    }
+  };
+
   return (
     <section className="container">
       <div className="mb-5 p-5">
-        <div className="row">
-          <div className="col-lg-12 col-md-12  col-sm-12 col-xs-12">
+        <div className="row justify-content-center mb-3">
+          <div className="col-lg-6 col-md-6  col-sm-6 col-xs-6">
             <div className="mx-auto text-center">
-              <h1 className="fw-bold"> হাজার মানুষের IELTS প্রস্তুতি </h1>
-              <h3> নিচে আপনার তথ্য দিয়ে রেজিস্ট্রেশন করুন </h3>
+              <h1 className="fw-bold"> রেজিস্ট্রেশন করে অংশ নিন মক টেস্ট এ</h1>
+              {/* <h3> রেজিস্ট্রেশন করে অংশ নিন মক টেস্ট এ </h3> */}
             </div>
           </div>
         </div>
+
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <div className="card mt-2 mb-4" style={{ background: "#D9D9D9" }}>
+            <div className="mt-2 mb-4">
               <div className="card-body">
-                <form
-                  method="POST"
-                  action="https://1000.hellobarc.com/signup/confirm"
-                >
-                  <input
-                    type="hidden"
-                    name="_token"
-                    defaultValue="tCd9khx5ncHiImEI3UCYuafXN73fZtjHsjp9NzM8"
-                  />
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="name"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Name
-                    </label>
+                <form onSubmit={handleSubmit}>
+                  <div className="row mb-3 justify-content-center">
                     <div className="col-md-6">
                       <input
-                        id="name"
                         type="text"
-                        className="form-control "
+                        className="form-control"
                         name="name"
-                        defaultValue=""
-                        required=""
-                        autoComplete="name"
                         placeholder="আপনার নাম"
-                        autofocus=""
+                        // style={{ backgroundColor: "#b6b4b4" }}
                       />
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="email"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Email Address
-                    </label>
+                  <div className="row mb-3 justify-content-center">
                     <div className="col-md-6">
                       <input
-                        id="email"
+                        type="text"
+                        className="form-control"
+                        name="mobile"
+                        placeholder="WhatsApp Number"
+                      />
+                    </div>
+                  </div>
+                  <div className="row mb-3 justify-content-center">
+                    <div className="col-md-6">
+                      <input
                         type="email"
-                        className="form-control "
+                        className="form-control"
                         name="email"
-                        defaultValue=""
-                        placeholder="আপনার ইমেইল (আপডেট জানানোর জন্য)"
-                        required=""
-                        autoComplete="email"
+                        placeholder="Email Address"
                       />
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="contact_number"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Contact Number
-                    </label>
-                    <div className="col-md-6">
-                      <input
-                        id="contact_number"
-                        type="contact_number"
-                        className="form-control "
-                        name="contact_number"
-                        defaultValue=""
-                        placeholder="আপনার Contact number নাম্বার (দ্রুত যোগাযোগের জন্য)"
-                        required=""
-                        autoComplete="contact_number"
-                      />
-                    </div>
-                  </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="division"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Division
-                    </label>
+                  <div className="row mb-3 justify-content-center">
                     <div className="col-md-6">
                       <select
-                        id="division"
-                        type="division"
                         className="form-control "
                         name="division"
-                        value=""
-                        placeholder="আপনার বর্তমান এডেন্স"
-                        required=""
-                        autoComplete="division"
-                        onchange="divisionSelected()"
+                        value={district}
+                        placeholder="জেলা"
+                        onChange={handleChangedistrict}
+                        style={{ backgroundColor: "rgb(228, 226, 226)" }}
                       >
-                        <option value="">বিভাগ নির্বাচন করুন</option>
+                        <option value="">জেলা নির্বাচন করুন</option>
                         <option value="Chattagram">চট্টগ্রাম </option>
                         <option value="Rajshahi">রাজশাহী </option>
                         <option value="Khulna">খুলনা </option>
@@ -115,60 +104,19 @@ const PaymentPage = () => {
                       </select>
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="district"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      District
-                    </label>
+                  <div className="row mb-3 justify-content-center">
                     <div className="col-md-6">
-                      <select
-                        id="district"
-                        type="district"
-                        className="form-control "
-                        name="district"
-                        value=""
-                        placeholder="আপনার বর্তমান এডেন্স"
-                        required=""
-                        autoComplete="district"
-                        onchange="districtSelected()"
-                      >
-                        <option value="">জেলা নির্বাচন করুন</option>
-                      </select>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="location"
+                        placeholder="আপনার লোকেশন"
+                      />
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="upazilla"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Upazilla
-                    </label>
-                    <div className="col-md-6">
-                      <select
-                        id="upazilla"
-                        type="upazilla"
-                        className="form-control "
-                        name="upazilla"
-                        value=""
-                        placeholder="আপনার বর্তমান এডেন্স"
-                        required=""
-                        autoComplete="upazilla"
-                        onchange="upazillaSelected()"
-                      >
-                        <option value="">উপজেলা নির্বাচন করুন</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div id="upazilla_selected" style={{ display: "none" }}>
-                    <div className="row mb-3">
-                      <label
-                        htmlFor="thana"
-                        className="col-md-4 col-form-label text-md-end"
-                      >
-                        Thana
-                      </label>
+
+                  {/* <div id="upazilla_selected" style={{ display: "none" }}>
+                    <div className="row mb-3 justify-content-center">
                       <div className="col-md-6">
                         <select
                           id="thana"
@@ -183,59 +131,9 @@ const PaymentPage = () => {
                         </select>
                       </div>
                     </div>
-                  </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="password"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Password
-                    </label>
-                    <div className="col-md-6">
-                      <input
-                        id="password"
-                        type="password"
-                        className="form-control "
-                        name="password"
-                        placeholder="********"
-                        required=""
-                        autoComplete="new-password"
-                      />
-                    </div>
-                  </div>
-                  <div className="row mb-3">
-                    <label
-                      htmlFor="password-confirm"
-                      className="col-md-4 col-form-label text-md-end"
-                    >
-                      Confirm Password
-                    </label>
-                    <div className="col-md-6">
-                      <input
-                        id="password-confirm"
-                        type="password"
-                        className="form-control "
-                        name="confirm_password"
-                        placeholder="Same as password"
-                        required=""
-                        autoComplete="new-password"
-                      />
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            {/* <div className="row mb-3">
-              <div className="mt-3 text-center">
-                <a
-                  href="https://1000.hellobarc.com/signin/confirm"
-                  style={{ color: "red", textDecoration: "none" }}
-                >
-                  পূর্বেই রেজিষ্ট্রেশন করে থাকলে{" "}
-                </a>
-              </div>
-            </div> */}
-            <div className="row mb-0">
+                  </div> */}
+
+                  {/* <div className="row mb-0">
               <div className="col-md-12 mx-auto">
                 <div className="d-grid mt-2">
                   <button
@@ -246,7 +144,88 @@ const PaymentPage = () => {
                   </button>
                 </div>
               </div>
+            </div> */}
+
+                  <h2 className="text-center">সময় বেছে নিন</h2>
+                  <div className="short_label">
+                    <h4 className="text-center fw-bold">
+                      ১৭ মে, ২০২৪ (শুক্রবার)
+                    </h4>
+                  </div>
+
+                  <div className="check_list">
+                    <div className="check_item">
+                      <input
+                        type="checkbox"
+                        name="eventdate"
+                        value="17th May 10am"
+                        onChange={handleEventDate}
+                        className="largerCheckbox bg_colour"
+                      />
+                      <p>সকাল ১০ টা </p>
+                    </div>
+
+                    <div className="check_item">
+                      <input
+                        type="checkbox"
+                        name="eventdate"
+                        value="17th May 2:30pm"
+                        onChange={handleEventDate}
+                        className="largerCheckbox bg_colour"
+                      />
+                      <p>দুপুর ২:৩০ টা </p>
+                    </div>
+                  </div>
+
+                  <div className="short_label">
+                    <h4 className="text-center fw-bold">
+                      ১৮ মে, ২০২৪ (শনিবার)
+                    </h4>
+                  </div>
+
+                  <div className="check_list">
+                    <div className="check_item">
+                      <input
+                        type="checkbox"
+                        value="18th May 10am"
+                        name="eventdate"
+                        onChange={handleEventDate}
+                        className="largerCheckbox bg_colour"
+                      />
+                      <p>সকাল ১০ টা </p>
+                    </div>
+
+                    <div className="check_item">
+                      <input
+                        type="checkbox"
+                        value="18th May 2pm"
+                        onChange={handleEventDate}
+                        name="eventdate"
+                        className="largerCheckbox bg_colour"
+                      />
+                      <p>দুপুর ২ টা </p>
+                    </div>
+                  </div>
+
+                  <div className="row justify-content-center mt-2">
+                    <div className="col-md-7">
+                      <h4 className="text-center">
+                        রিডিং, রাইটিং এবং লিসেনিং শেষ হবার পর স্পিকিং নেয়া হবে
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div className="register_confirm mt-4">
+                    <button type="submit" className="btn btn-success">
+                      রেজিস্ট্রেশন কনফার্ম করুন
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
+
+            <h3 className="text-center">যে কোন সমস্যায় ফোন করুন</h3>
+            <h3 className="text-center fw-bold">01990000000</h3>
           </div>
         </div>
       </div>
