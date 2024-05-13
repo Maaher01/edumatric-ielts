@@ -6,6 +6,7 @@ import { baseUrl } from "../api/api";
 
 const PaymentConfirm = () => {
   const { id } = useParams();
+
   const navigate = useNavigate();
 
   const [masterClassChecked, setMasterClassChecked] = useState(true);

@@ -249,7 +249,9 @@ const LandingPage = () => {
       </div>
 
       <div className="reg__button">
-        <button className="btn btn-success">রেজিস্ট্রেশন করতে চাই</button>
+        <Link to="/payment">
+          <button className="btn btn-success">রেজিস্ট্রেশন করতে চাই</button>
+        </Link>
       </div>
 
       <h2 className="text-center mt-4 fw-bold">
@@ -310,7 +312,9 @@ const LandingPage = () => {
       </h2>
 
       <div className="reg__big mt-4">
-        <button className="btn btn-success btn-lg">Register Now</button>
+        <Link to="/payment">
+          <button className="btn btn-success btn-lg">Register Now</button>
+        </Link>
       </div>
 
       <div className="venue">
