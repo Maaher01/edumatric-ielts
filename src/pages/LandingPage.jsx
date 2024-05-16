@@ -12,7 +12,7 @@ const LandingPage = () => {
           <div className="col-md-6 col-sm-12">
             <div className="mw-100 mh-100 overflow-hidden">
               <img
-                src="src/assets/images/Home Page image.jpg"
+                src="./assets/images/Home Page image.jpg"
                 className="w-100 h-100 rounded"
               />
             </div>
@@ -61,7 +61,7 @@ const LandingPage = () => {
                 <div className="pb-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <img
-                      src="src/assets/images/tables-and-chairs.jpg"
+                      src="./assets/images/tables-and-chairs.jpg"
                       rounded
                       className="w-100 rounded img-thumbnail p-4"
                     />
@@ -98,7 +98,7 @@ const LandingPage = () => {
                 <div className="pb-3">
                   <div className="d-flex align-items-center  justify-content-center">
                     <img
-                      src="src/assets/images/girl-writing.jpg"
+                      src="./assets/images/girl-writing.jpg"
                       rounded
                       className="w-100 border rounded"
                     />

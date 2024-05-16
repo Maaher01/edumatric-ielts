@@ -1,13 +1,11 @@
 import "../index.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { baseUrl } from "../api/api";
 
 const PaymentConfirm = () => {
   const { id } = useParams();
-
-  const navigate = useNavigate();
 
   const [masterClassChecked, setMasterClassChecked] = useState(true);
   const [totalbill, setTotalBill] = useState(0);
@@ -22,26 +20,25 @@ const PaymentConfirm = () => {
     setTotalBill(total);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData();
+  const bkashPayment = () => {
+    axios
+      .post(`${baseUrl}/bkash/create`, {
+        amount: totalbill,
+      })
+      .then((response) => {
+        localStorage.setItem("amount", response.data.amount);
+        localStorage.setItem("userId", id);
+        localStorage.setItem("paymentID", response.data.paymentID);
 
-    formData.append("totalbill", totalbill);
-
-    try {
-      const response = await axios.post(
-        `${baseUrl}/studentinfo/updatePayment/${id}`,
-        formData
-      );
-      console.log(response);
-      navigate("/payment-notice");
-    } catch (error) {
-      console.error("There was an error:", error);
-    }
+        window.location.href = response?.data?.bkashURL;
+      })
+      .catch((error) => {
+        console.log("An error occurred:", error);
+      });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
       <h2 className="text-center fw-bold mt-5">পেমেন্ট কনফার্ম করুন</h2>
 
       <div className="label_sec">
@@ -72,18 +69,21 @@ const PaymentConfirm = () => {
           name="totalbill"
           value={totalbill}
           type="text"
+          readOnly
         />
       </div>
 
       <div className="button_container">
-        <button className="btn btn-success fw-bold">Pay Now</button>
+        <button className="btn btn-success fw-bold" onClick={bkashPayment}>
+          Pay Now
+        </button>
       </div>
 
       <div className="wrap-text">
         <h3 className="text-center">যে কোন সমস্যায় ফোন করুন </h3>
         <h3 className="text-center fw-bold">01990000000</h3>
       </div>
-    </form>
+    </div>
   );
 };
 

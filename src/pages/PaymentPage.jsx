@@ -41,7 +41,6 @@ const PaymentPage = () => {
           <div className="col-lg-6 col-md-6  col-sm-6 col-xs-6">
             <div className="mx-auto text-center">
               <h1 className="fw-bold"> রেজিস্ট্রেশন করে অংশ নিন মক টেস্ট এ</h1>
-              {/* <h3> রেজিস্ট্রেশন করে অংশ নিন মক টেস্ট এ </h3> */}
             </div>
           </div>
         </div>
@@ -58,7 +57,6 @@ const PaymentPage = () => {
                         className="form-control"
                         name="name"
                         placeholder="আপনার নাম"
-                        // style={{ backgroundColor: "#b6b4b4" }}
                       />
                     </div>
                   </div>
@@ -114,37 +112,6 @@ const PaymentPage = () => {
                       />
                     </div>
                   </div>
-
-                  {/* <div id="upazilla_selected" style={{ display: "none" }}>
-                    <div className="row mb-3 justify-content-center">
-                      <div className="col-md-6">
-                        <select
-                          id="thana"
-                          type="thana"
-                          className="form-control "
-                          name="thana"
-                          value=""
-                          placeholder="আপনার বর্তমান এডেন্স"
-                          autoComplete="thana"
-                        >
-                          <option value="">থানা নির্বাচন করুন</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* <div className="row mb-0">
-              <div className="col-md-12 mx-auto">
-                <div className="d-grid mt-2">
-                  <button
-                    className="btn fw-bold"
-                    style={{ background: "#00a651", color: "white" }}
-                  >
-                    ক্লিক করে জয়েন করুন হাজার মানুষের IELTS প্রস্তুতি প্রোগ্রামে
-                  </button>
-                </div>
-              </div>
-            </div> */}
 
                   <h2 className="text-center">সময় বেছে নিন</h2>
                   <div className="short_label">

@@ -1,9 +1,50 @@
 import Poster from "../assets/images/payment-notice.png";
 import Instructor from "../assets/images/instructor.jpg";
 import "../index.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { baseUrl } from "../api/api";
 
-const PaymentNotice = () => {
+const PaymentSuccess = () => {
   const price = "১০,০০০ > ৪৯০০ > ৩৯০০";
+
+  const [paymentID, setPaymentID] = useState("");
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [eventdate, setEventDate] = useState("");
+
+  useEffect(() => {
+    setPaymentID(localStorage.getItem("paymentID"));
+    paymentInfo();
+  }, []);
+
+  const paymentInfo = async () => {
+    const formData = new FormData();
+
+    formData.append("transactionid", localStorage.getItem("paymentID"));
+    formData.append("totalbill", localStorage.getItem("amount"));
+    formData.append("paymentstatus", 1);
+
+    const userId = localStorage.getItem("userId");
+
+    try {
+      const response = await axios.post(
+        `${baseUrl}/studentinfo/updatePayment/${userId}`,
+        formData
+      );
+
+      if (response.data && response.data.profile) {
+        setName(response.data.profile._name);
+        setMobile(response.data.profile._mobile);
+        setEventDate(response.data.profile._eventdate);
+      }
+
+      localStorage.clear();
+    } catch (error) {
+      console.error("There was an error:", error);
+    }
+  };
+
   return (
     <>
       <div className="row justify-content-center mt-5">
@@ -14,11 +55,11 @@ const PaymentNotice = () => {
         </div>
 
         <div className="info_wrap">
-          <p>নাম:</p>
-          <p>মোবাইল: </p>
-          <p>সিরিয়াল নাম্বার: </p>
-          <p>সময়: </p>
-          <p>Masterclass: yes (time)</p>
+          <p>নাম: {name}</p>
+          <p>মোবাইল: {mobile}</p>
+          <p>সিরিয়াল নাম্বার: {paymentID}</p>
+          <p>সময়: {eventdate}</p>
+          {/* <p>Masterclass: yes (time)</p> */}
           <p>ভেন্যু: মগবাজার অফিস.</p>
         </div>
       </div>
@@ -113,4 +154,4 @@ const PaymentNotice = () => {
   );
 };
 
-export default PaymentNotice;
+export default PaymentSuccess;
