@@ -1,11 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import { baseUrl } from "../api/api";
 
 const paymentFail = () => {
+  const [statusMessage, setStatusMessage] = useState("");
+  const { statusMessage: messageFromURL } = useParams();
+
   useEffect(() => {
     paymentStatusUpdate();
   }, []);
+
+  useEffect(() => {
+    setStatusMessage(messageFromURL);
+  }, [messageFromURL]);
 
   const paymentStatusUpdate = async () => {
     const formData = new FormData();
@@ -16,11 +24,13 @@ const paymentFail = () => {
 
     try {
       const response = await axios.post(
-        `${baseUrl}/studentinfo/updatePayment/${userId}`,
+        `${baseUrl}/studentinfo/updatePayment/56`,
         formData
       );
 
-      localStorage.clear();
+      console.log(response);
+
+      // localStorage.clear();
     } catch (error) {
       console.error("There was an error:", error);
     }
@@ -35,6 +45,14 @@ const paymentFail = () => {
               দুঃখিত আপনার রেজিস্ট্রেশনটি সম্পূর্ণ হয়নি, অনুগ্রহ করে পুনরায়
               চেষ্টা করুন।
             </h1>
+          </div>
+        </div>
+      </div>
+
+      <div className="row justify-content-center mt-5">
+        <div className="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+          <div className="mx-auto text-center">
+            <h1 className="fw-bold">{statusMessage}</h1>
           </div>
         </div>
       </div>

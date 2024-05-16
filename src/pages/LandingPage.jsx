@@ -46,11 +46,11 @@ const LandingPage = () => {
               <div className="col-12">
                 <div className="text-center mt-2 mb-5">
                   <h2 className="fw-bold mb-3" style={{ fontSize: "2.5rem" }}>
-                    বাংলাদেশে এই প্রথম ফুল ফ্লেজ মক টেস্ট মাত্র ৯৯ টাকায়
+                    বাংলাদেশে এই প্রথম ফুল মক টেস্ট মাত্র ৯৯ টাকায়
                   </h2>
                   <h3 className="mt-5">
                     এই ৯৯ টাকার মক টেস্টে আপনি পাচ্ছেন IELTS এর ৪টি মডিউলে ফুল
-                    ফ্লেয IELTS ready টেস্ট
+                    IELTS ready টেস্ট
                   </h3>
                 </div>
               </div>
@@ -186,24 +186,24 @@ const LandingPage = () => {
         {/* Instructor section */}
         <div className="instructor_sec">
           <div className="instructor_info">
-            <img src={Instructor} alt="instructor" />
+            <img src="src/assets/images/walidrahman.jpg" alt="instructor" />
 
             <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
             <p className="text-center">Academic Head, Edumatric</p>
           </div>
 
           <div className="instructor_info">
-            <img src={Instructor} alt="instructor" />
+            <img src="src/assets/images/ishrakhasnain.jpg" alt="instructor" />
 
-            <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
-            <p className="text-center">Academic Head, Edumatric</p>
+            <p className="text-center fw-bold pt-3">ইশরাক হাসনাইন</p>
+            <p className="text-center">Chief Co-Ordinator, Edumatric</p>
           </div>
 
           <div className="instructor_info">
-            <img src={Instructor} alt="instructor" />
+            <img src="src/assets/images/faiz_ullah.jpg" alt="instructor" />
 
-            <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
-            <p className="text-center">Academic Head, Edumatric</p>
+            <p className="text-center fw-bold pt-3">ফাইজ উল্লাহ</p>
+            <p className="text-center">IELTS Instructor, Edumatric</p>
           </div>
         </div>
       </section>
@@ -229,7 +229,7 @@ const LandingPage = () => {
       <div className="test__container">
         <div className="test__item">
           <h3 className="text-center">
-            Edumatric একটি British Council দ্বারা দ্বীকৃত মক ভ্যানু যেখানে main
+            Edumatric একটি British Council দ্বারা সীকৃত মক ভ্যানু যেখানে main
             IELTS conduct করা হয়।
           </h3>
         </div>
@@ -356,7 +356,7 @@ const LandingPage = () => {
             >
               <div className="accordion-body">
                 আপনি যে সময়ে মক টেস্ট রেজিস্ট্রেশন করেছেন তার ঠিক আধা ঘণ্টা আগে
-                আপনাকে ভ্যাণুতে উপস্থিত থাকতে হবে।
+                আপনাকে ভেন্যুতে উপস্থিত থাকতে হবে।
               </div>
             </div>
           </div>
@@ -429,7 +429,7 @@ const LandingPage = () => {
               <div className="accordion-body">
                 আপনি নিজের জন্য একটি মক টেস্ট কিনতে পারবেন। তবে আপনি এবং আপনার ৩
                 জন বন্ধু একত্রে রেজিস্ট্রেশন করেন, তাহলে অতিরিক্ত একজন ফ্রি
-                রেজিস্ট্রেশন করতে পারবেন। মনে ৩ জন রেজিস্ট্রেশন করলে ৪ জন টেস্ট
+                রেজিস্ট্রেশন করতে পারবেন। মানে ৩ জন রেজিস্ট্রেশন করলে ৪ জন টেস্ট
                 এ অংশ নিতে পারবেন। তবে সে ক্ষেত্রে আমাদের হটলাইন নাম্বারে
                 যোগাযোগ করে রেজিস্ট্রেশন করতে হবে। তার সাথে ৪ জন ফ্রি
                 মাস্টার্কলাসে অংশ নিতে পারবেন। অতিরিক্ত ফি প্রদান করতে হবে না।
@@ -456,7 +456,7 @@ const LandingPage = () => {
             >
               <div className="accordion-body">
                 মক টেস্ট এর রেজাল্ট পরবর্তী ৭ কর্ম দিবসের মধ্যে পাবেন। রেজাল্ট
-                তৈরী হল আপনাদের মোবাইলে টেক্সট ম্যসেজ মাধ্যমে জানানো হবে।এবং
+                তৈরী হলে আপনাদের মোবাইলে টেক্সট ম্যসেজ মাধ্যমে জানানো হবে।এবং
                 রেজাল্ট Edumatric এর মগবাজার একাডেমিক ভবন থেকে সংগ্রহ করা হবে।
               </div>
             </div>
@@ -480,7 +480,7 @@ const LandingPage = () => {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                হ্যা মক এর রেজাল্ট IELTS এর মত হবে, কারণ edumatric এর examinar
+                হ্যাঁ মক এর রেজাল্ট IELTS এর মত হবে, কারণ edumatric এর examinar
                 রাঁ অত্যন্ত অভিজ্ঞ এবং এখানে IELTS band descriptor অনুযায়ী
                 রেজাল্ট তৈরি করা হয়। যা সুস্পষ্ট এবং সঠিক।
               </div>
