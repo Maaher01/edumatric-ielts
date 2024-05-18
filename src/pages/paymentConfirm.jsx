@@ -26,6 +26,7 @@ const PaymentConfirm = () => {
         amount: totalbill,
       })
       .then((response) => {
+        console.log("Response", response);
         localStorage.setItem("amount", response.data.amount);
         localStorage.setItem("userId", id);
         localStorage.setItem("paymentID", response.data.paymentID);

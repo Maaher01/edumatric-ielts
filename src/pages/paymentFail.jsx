@@ -1,34 +1,25 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import { baseUrl } from "../api/api";
 
 const paymentFail = () => {
-  const [statusMessage, setStatusMessage] = useState("");
-  const { statusMessage: messageFromURL } = useParams();
-
   useEffect(() => {
     paymentStatusUpdate();
   }, []);
-
-  useEffect(() => {
-    setStatusMessage(messageFromURL);
-  }, [messageFromURL]);
 
   const paymentStatusUpdate = async () => {
     const formData = new FormData();
 
     formData.append("paymentstatus", 2);
+    formData.append("transactionid", localStorage.getItem("paymentID"));
 
     const userId = localStorage.getItem("userId");
 
     try {
       const response = await axios.post(
-        `${baseUrl}/studentinfo/updatePayment/56`,
+        `${baseUrl}/studentinfo/updatePayment/${userId}`,
         formData
       );
-
-      console.log(response);
 
       // localStorage.clear();
     } catch (error) {
@@ -49,13 +40,13 @@ const paymentFail = () => {
         </div>
       </div>
 
-      <div className="row justify-content-center mt-5">
+      {/* <div className="row justify-content-center mt-5">
         <div className="col-lg-7 col-md-7 col-sm-7 col-xs-7">
           <div className="mx-auto text-center">
             <h1 className="fw-bold">{statusMessage}</h1>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="short_level_two">
         <h2 className="text-center mt-5">

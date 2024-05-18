@@ -317,18 +317,23 @@ const LandingPage = () => {
         </Link>
       </div>
 
-      <div className="venue">
+      <div className="venue d-flex gap-5">
         <div className="venue__sec">
           <h2 className="fw-bold">Mock Venue</h2>
           <p>
-            Mogbajar Address <br /> Location: <br /> Phone number:
+            Mogbajar Address <br /> Location: Greenland Tower, Level 4, 26
+            Shahid Sangbadik Selina Parvin Road, Moghbazar, Dhaka 1217, (beside
+            siddheswari college)
+            <br /> Phone number: 01709990904
           </p>
         </div>
         <div className="office__sec">
           <h2 className="fw-bold">Head Office</h2>
           <p>
-            Gulshan Address <br /> Location: <br />
-            Phone number:
+            Gulshan Address <br /> Location: 1 Gulshan Avenue, Gulshan-1,
+            Dhaka-1212, Bangladesh.
+            <br />
+            Phone number: +88024881021017
           </p>
         </div>
       </div>

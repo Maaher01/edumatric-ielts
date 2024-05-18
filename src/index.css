@@ -327,7 +327,7 @@ input.largerCheckbox {
 }
 
 .venue {
-  max-width: 550px;
+  max-width: 650px;
   margin: 40px auto;
   display: flex;
   justify-content: space-between;
@@ -337,8 +337,16 @@ input.largerCheckbox {
   font-size: 18px;
 }
 
+.venue__sec {
+  width: 50%;
+}
+
 .office__sec p {
   font-size: 18px;
+}
+
+.office__sec {
+  width: 50%;
 }
 
 .mock__test {
