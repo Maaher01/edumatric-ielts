@@ -45,9 +45,9 @@ const PaymentPage = () => {
           </div>
         </div>
 
-        <div className="row justify-content-center">
-          <div className="col-md-8">
-            <div className="mt-2 mb-4">
+        <div className="row justify-content-center mt-5">
+          <div className="col-md-10">
+            <div className="mt-3 mb-3">
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
                   <div className="row mb-3 justify-content-center">
@@ -83,12 +83,12 @@ const PaymentPage = () => {
                   <div className="row mb-3 justify-content-center">
                     <div className="col-md-6">
                       <select
-                        className="form-control "
+                        className="form-control"
                         name="division"
                         value={district}
                         placeholder="জেলা"
                         onChange={handleChangedistrict}
-                        style={{ backgroundColor: "rgb(228, 226, 226)" }}
+                        style={{ backgroundColor: "#f5f5f5" }}
                       >
                         <option value="">জেলা নির্বাচন করুন</option>
                         <option value="Dhaka">ঢাকা</option>
@@ -169,64 +169,64 @@ const PaymentPage = () => {
                     </div>
                   </div>
 
-                  <h2 className="text-center">সময় বেছে নিন</h2>
+                  <h2 className="text-center mt-5">সময় বেছে নিন</h2>
                   <div className="short_label">
                     <h4 className="text-center fw-bold">
-                      ১৭ মে, ২০২৪ (শুক্রবার)
+                      ২৫ মে, ২০২৪ (শনিবার)
                     </h4>
                   </div>
 
                   <div className="check_list">
                     <div className="check_item">
                       <input
-                        type="checkbox"
+                        type="radio"
                         name="eventdate"
-                        value="17th May 10am"
+                        value="25th May 10am"
                         onChange={handleEventDate}
                         className="largerCheckbox bg_colour"
                       />
-                      <p>সকাল ১০ টা </p>
+                      <p style={{ fontFamily: "sans-serif" }}>সকাল ১০ টা </p>
                     </div>
 
                     <div className="check_item">
                       <input
-                        type="checkbox"
+                        type="radio"
                         name="eventdate"
-                        value="17th May 2:30pm"
+                        value="25th May 2:30pm"
                         onChange={handleEventDate}
                         className="largerCheckbox bg_colour"
                       />
-                      <p>দুপুর ২:৩০ টা </p>
+                      <p style={{ fontFamily: "sans-serif" }}>দুপুর ২:৩০ টা </p>
                     </div>
                   </div>
 
                   <div className="short_label">
                     <h4 className="text-center fw-bold">
-                      ১৮ মে, ২০২৪ (শনিবার)
+                      ৩১ মে, ২০২৪ (শুক্রবার)
                     </h4>
                   </div>
 
                   <div className="check_list">
                     <div className="check_item">
                       <input
-                        type="checkbox"
-                        value="18th May 10am"
+                        type="radio"
+                        value="31st May 10am"
                         name="eventdate"
                         onChange={handleEventDate}
                         className="largerCheckbox bg_colour"
                       />
-                      <p>সকাল ১০ টা </p>
+                      <p style={{ fontFamily: "sans-serif" }}>সকাল ১০ টা </p>
                     </div>
 
                     <div className="check_item">
                       <input
-                        type="checkbox"
-                        value="18th May 2pm"
+                        type="radio"
+                        value="31st May 2pm"
                         onChange={handleEventDate}
                         name="eventdate"
                         className="largerCheckbox bg_colour"
                       />
-                      <p>দুপুর ২ টা </p>
+                      <p style={{ fontFamily: "sans-serif" }}>দুপুর ২ টা </p>
                     </div>
                   </div>
 
@@ -238,8 +238,17 @@ const PaymentPage = () => {
                     </div>
                   </div>
 
-                  <div className="register_confirm mt-4">
-                    <button type="submit" className="btn btn-success">
+                  <div className="register_confirm d-grid mt-5">
+                    <button
+                      type="submit"
+                      className="btn fw-bold py-2 px-5"
+                      style={{
+                        background: "#00a651",
+                        color: "white",
+                        borderRadius: "16px",
+                        fontSize: "18px",
+                      }}
+                    >
                       রেজিস্ট্রেশন কনফার্ম করুন
                     </button>
                   </div>
@@ -247,8 +256,8 @@ const PaymentPage = () => {
               </div>
             </div>
 
-            <h3 className="text-center">যে কোন সমস্যায় ফোন করুন</h3>
-            <h3 className="text-center fw-bold">01990000000</h3>
+            <h1 className="text-center mt-5">যে কোন সমস্যায় ফোন করুন</h1>
+            <h1 className="text-center fw-bold">01709990904</h1>
           </div>
         </div>
       </div>

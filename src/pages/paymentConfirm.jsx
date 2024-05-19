@@ -39,13 +39,21 @@ const PaymentConfirm = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-center fw-bold mt-5">পেমেন্ট কনফার্ম করুন</h2>
+    <>
+      <h1 className="text-center fw-bold mt-5">পেমেন্ট কনফার্ম করুন</h1>
 
       <div className="label_sec">
         <div className="content_label">
-          <p style={{ marginBottom: "0px" }}>Mock Test </p>
-          <p style={{ marginBottom: "0px" }}>99 Taka</p>
+          <p
+            style={{ marginBottom: "0px", color: "#757575", fontWeight: "500" }}
+          >
+            Mock Test{" "}
+          </p>
+          <p
+            style={{ marginBottom: "0px", color: "#757575", fontWeight: "500" }}
+          >
+            99 Taka
+          </p>
         </div>
 
         <div className="content_check">
@@ -57,21 +65,46 @@ const PaymentConfirm = () => {
             defaultChecked="true"
           />
           <div className="check_label">
-            <p style={{ marginBottom: "0px" }}>Master Class </p>
-            <p style={{ marginBottom: "0px" }}>100 Taka</p>
+            <p
+              style={{
+                marginBottom: "0px",
+                color: "#757575",
+                fontWeight: "500",
+              }}
+            >
+              Master Class{" "}
+            </p>
+            <p
+              style={{
+                marginBottom: "0px",
+                color: "#757575",
+                fontWeight: "500",
+              }}
+            >
+              100 Taka
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="amount_container">
-        <div className="amount_label fw-bold">Total</div>
+      <div className="amount_container my-5">
+        <div
+          className="amount_label"
+          style={{
+            color: "#757575",
+            fontWeight: "900",
+            fontSize: "21px",
+          }}
+        >
+          Total :
+        </div>
         <input
           className="amount_price fw-bold"
           name="totalbill"
           value={totalbill}
           type="text"
           readOnly
-        />
+        />{" "}
       </div>
 
       <div className="button_container">
@@ -81,10 +114,14 @@ const PaymentConfirm = () => {
       </div>
 
       <div className="wrap-text">
-        <h3 className="text-center">যে কোন সমস্যায় ফোন করুন </h3>
-        <h3 className="text-center fw-bold">01990000000</h3>
+        <h2 className="text-center" style={{ fontSize: "42px" }}>
+          যে কোন সমস্যায় ফোন করুন{" "}
+        </h2>
+        <h2 className="text-center fw-bold" style={{ fontSize: "42px" }}>
+          01709990904
+        </h2>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { baseUrl } from "../api/api";
 
@@ -16,7 +16,7 @@ const paymentFail = () => {
     const userId = localStorage.getItem("userId");
 
     try {
-      const response = await axios.post(
+      await axios.post(
         `${baseUrl}/studentinfo/updatePayment/${userId}`,
         formData
       );
@@ -29,16 +29,10 @@ const paymentFail = () => {
 
   return (
     <>
-      <div className="row justify-content-center mt-5">
-        <div className="col-lg-7 col-md-7  col-sm-7 col-xs-7">
-          <div className="mx-auto text-center">
-            <h1 className="fw-bold">
-              দুঃখিত আপনার রেজিস্ট্রেশনটি সম্পূর্ণ হয়নি, অনুগ্রহ করে পুনরায়
-              চেষ্টা করুন।
-            </h1>
-          </div>
-        </div>
-      </div>
+      <h1 className="text-center fw-bold mt-5" style={{ fontSize: "44px" }}>
+        দুঃখিত আপনার রেজিস্ট্রেশনটি সম্পূর্ণ হয়নি, অনুগ্রহ করে পুনরায় চেষ্টা
+        করুন।
+      </h1>
 
       {/* <div className="row justify-content-center mt-5">
         <div className="col-lg-7 col-md-7 col-sm-7 col-xs-7">
@@ -58,7 +52,7 @@ const paymentFail = () => {
       <div className="short_level_three mt-5">
         <h2 className="text-center">
           <span className="fw-bold"> IELTS registration </span> করতে ফোন করুন
-          <span className="fw-bold"> 019999999999</span>
+          <span className="fw-bold"> 01709990904</span>
         </h2>
       </div>
     </>

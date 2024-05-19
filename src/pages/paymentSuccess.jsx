@@ -47,21 +47,17 @@ const PaymentSuccess = () => {
 
   return (
     <>
-      <div className="row justify-content-center mt-5">
-        <div className="col-lg-7 col-md-7  col-sm-7 col-xs-7">
-          <div className="mx-auto text-center">
-            <h1 className="fw-bold">আপনার রেজিস্ট্রেশন সম্পন্ন হয়েছে</h1>
-          </div>
-        </div>
+      <h1 className="text-center fw-bold mt-4" style={{ fontSize: "44px" }}>
+        আপনার রেজিস্ট্রেশন সম্পন্ন হয়েছে
+      </h1>
 
-        <div className="info_wrap">
-          <p>নাম: {name}</p>
-          <p>মোবাইল: {mobile}</p>
-          <p>সিরিয়াল নাম্বার: {paymentID}</p>
-          <p>সময়: {eventdate}</p>
-          {/* <p>Masterclass: yes (time)</p> */}
-          <p>ভেন্যু: মগবাজার অফিস.</p>
-        </div>
+      <div className="info_wrap">
+        <p>নাম: {name}</p>
+        <p>মোবাইল: {mobile}</p>
+        <p>সিরিয়াল নাম্বার: {paymentID}</p>
+        <p>সময়: {eventdate}</p>
+
+        <p>ভেন্যু: মগবাজার অফিস.</p>
       </div>
 
       <div className="short_level_one">
@@ -76,80 +72,132 @@ const PaymentSuccess = () => {
       </div>
 
       <div className="short_level_three mt-5">
-        <h2 className="text-center">
+        <h1 className="text-center">
           <span className="fw-bold"> IELTS registration </span> করতে ফোন করুন
-          <span className="fw-bold"> 019999999999</span>
-        </h2>
+          <span className="fw-bold"> 01709990904</span>
+        </h1>
       </div>
 
-      <h2 className="text-center fw-bold mt-5">IELTS Course</h2>
+      <h2
+        className="text-center m-5"
+        style={{ fontSize: "50px", fontWeight: "800" }}
+      >
+        IELTS Course
+      </h2>
 
-      <div className=" row d-flex justify-content-between sit_info mt-5">
-        <div className="sit_poster">
+      <div className="cash__back d-flex gap-4">
+        <div className="cash__back__poster">
           <img src={Poster} alt="poster" />
         </div>
 
-        <div className="sit_content">
-          <h2 className="fw-bold">
+        <div className="cash__back__content">
+          <h2>
             ৩ মাসের IELTS course এ রেজিস্ট্রেশন করে বুঝে নিন ১০০০ টাকা ক্যাশ
             ব্যক।
           </h2>
-          <h2 className="fw-bold pt-4">(রেজিস্ট্রেশন শেষ হচ্ছে ১২ মে, ২০২৪)</h2>
+          <h2 className="pt-4">(রেজিস্ট্রেশন শেষ হচ্ছে ২৬ মে, ২০২৪)</h2>
         </div>
       </div>
 
-      <h2 className="text-center fw-bold mt-4 short_level_one">
+      <h2
+        className="text-center short_level_one"
+        style={{ fontWeight: "900", fontSize: "44px", marginTop: "64px" }}
+      >
         যা যা থাকছে ৩ মাসের IELTS course এ যা যা থাকছে
       </h2>
 
       <div className="course_module">
         <ul>
-          <li>- ৩ মাসে complete IELTS preparation</li>
-          <li>- ৪২ টি ক্লাস</li>
-          <li>- ৪ টি মডিউলে ক্লাস</li>
-          <li>- ফ্রি স্পিকিং কোর্স (আলাদা)</li>
-          <li>- ইংলিশ ফাউন্ডেশন কোর্স</li>
-          <li>- ১ টি মক টেস্ট</li>
+          <li style={{ fontSize: "30px", fontWeight: "500" }}>
+            {" "}
+            - ৩ মাসে complete IELTS preparation
+          </li>
+          <li style={{ fontSize: "30px", fontWeight: "500" }}>
+            {" "}
+            - ৪২ টি ক্লাস
+          </li>
+          <li style={{ fontSize: "30px", fontWeight: "500" }}>
+            {" "}
+            - ৪ টি মডিউলে ক্লাস
+          </li>
+          <li style={{ fontSize: "30px", fontWeight: "500" }}>
+            {" "}
+            - ফ্রি স্পিকিং কোর্স (আলাদা)
+          </li>
+          <li style={{ fontSize: "30px", fontWeight: "500" }}>
+            {" "}
+            - ইংলিশ ফাউন্ডেশন কোর্স
+          </li>
+          <li style={{ fontSize: "30px", fontWeight: "500" }}>
+            {" "}
+            - ১ টি মক টেস্ট
+          </li>
         </ul>
       </div>
 
       <div className="instructor_sec">
         <div className="instructor_info">
-          <img src={Instructor} alt="instructor" />
+          <img src="src/assets/images/walidrahman.jpg" alt="instructor" />
 
-          <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
-          <p className="text-center">Academic Head, Edumatric</p>
+          <p className="text-center fw-bold pt-3 fs-5">ওয়ালিদ রহমান</p>
+          <p className="text-center" style={{ fontSize: "19px" }}>
+            Academic Head, Edumatric
+          </p>
         </div>
         <div className="info_text">
-          <h3 className="text-center">কোর্স ইন্সট্রাক্টর হিসেবে যারা থাকছেন</h3>
+          <h2 className="text-center">কোর্স ইন্সট্রাক্টর হিসেবে যারা থাকছেন</h2>
         </div>
         <div className="instructor_info">
-          <img src={Instructor} alt="instructor" />
+          <img src="src/assets/images/faiz_ullah.jpg" alt="instructor" />
 
-          <p className="text-center fw-bold pt-3">ওয়ালিদ রহমান</p>
-          <p className="text-center">Academic Head, Edumatric</p>
+          <p className="text-center fw-bold pt-3 fs-5">ফাইজ উল্লাহ</p>
+          <p className="text-center" style={{ fontSize: "19px" }}>
+            IELTS Instructor, Edumatric
+          </p>
         </div>
       </div>
 
-      <div className="schedule pt-5">
-        <h2 className="text-center fw-bold">ক্লাস শুরু হচ্ছে</h2>
-        <p className="text-center">১৪ মে, ২০২৪</p>
-        <p className="text-center">২১ মে, ২০২৪</p>
+      <div className="schedule">
+        <h2 className="text-center" style={{ fontSize: "48px" }}>
+          ক্লাস শুরু হচ্ছে
+        </h2>
+        <p className="text-center fw-light" style={{ fontSize: "28px" }}>
+          ১ জুন, ২০২৪
+        </p>
+        <p className="text-center fw-light" style={{ fontSize: "28px" }}>
+          ২ জুন, ২০২৪
+        </p>
       </div>
 
-      <h2 className="text-center fw-bold">রেজিস্ট্রেশন ফি</h2>
-      <h2 className="text-center fw-bold"> {price} </h2>
+      <h2 className="text-center fw-bold" style={{ fontSize: "38px" }}>
+        রেজিস্ট্রেশন ফি
+      </h2>
+      <h2 className="text-center fw-bold mt-4" style={{ fontSize: "42px" }}>
+        {price}
+      </h2>
       <p className="text-center h4 pb-4">
         (শুধুমাত্র যারা মক টেস্ট কিনবেন তাদের জন্য)
       </p>
 
-      <div className="reg_sec pb-3">
-        <button className="btn btn-success">কোর্সে রেজিস্ট্রেশন করুন</button>
+      <div className="d-grid mt-5">
+        <button
+          className="btn fw-bold py-2 px-5"
+          style={{
+            background: "#00a651",
+            color: "white",
+            borderRadius: "16px",
+            fontSize: "24px",
+            maxWidth: "400px",
+            margin: "auto",
+          }}
+        >
+          কোর্সে রেজিস্ট্রেশন করুন
+        </button>
       </div>
 
-      <h4 className="text-center text-success pb-3">
-        অথবা ফোন করুন 01990000000
-      </h4>
+      <h3 className="text-center text-success pb-3 mt-4">
+        অথবা ফোন করুন 01709990904
+      </h3>
     </>
   );
 };
