@@ -42,12 +42,12 @@ const paymentFail = () => {
         </div>
       </div> */}
 
-      <div className="short_level_two">
+      {/* <div className="short_level_two">
         <h2 className="text-center mt-5">
           Edumatric এ IELTS রেজিস্ট্রেশন করুন এবং ৫০০ টাকা instant cashback
           গ্রহণ করুন।
         </h2>
-      </div>
+      </div> */}
 
       <div className="short_level_three mt-5">
         <h2 className="text-center">

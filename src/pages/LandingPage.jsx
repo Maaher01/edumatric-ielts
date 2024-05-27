@@ -1,5 +1,6 @@
 import PeoplePoster from "../assets/images/people.png";
 import MockPoster from "../assets/images/mask.png";
+import Footer from "../shared/Footer";
 import { useRef } from "react";
 
 import { Link } from "react-router-dom";
@@ -242,12 +243,12 @@ const LandingPage = () => {
       </h1>
 
       <div className="test__container">
-        <div className="test__item">
+        {/* <div className="test__item">
           <h3 className="text-center" style={{ fontSize: "26px" }}>
             Edumatric একটি British Council দ্বারা সীকৃত মক ভ্যানু যেখানে main
             IELTS conduct করা হয়।
           </h3>
-        </div>
+        </div> */}
 
         <div className="test__item">
           <h3 className="text-center" style={{ fontSize: "26px" }}>
@@ -298,9 +299,9 @@ const LandingPage = () => {
             <h3>৩ মাসের IELTS course এ ১০০০ টাকা Instant cashback</h3>
           </div>
 
-          <div className="test__item">
+          {/* <div className="test__item">
             <h3>IELTS registration এ ৫০০ টাকা cashback</h3>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -530,6 +531,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

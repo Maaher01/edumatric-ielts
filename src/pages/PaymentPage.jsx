@@ -172,7 +172,7 @@ const PaymentPage = () => {
                   <h2 className="text-center mt-5">সময় বেছে নিন</h2>
                   <div className="short_label">
                     <h4 className="text-center fw-bold">
-                      ২৫ মে, ২০২৪ (শনিবার)
+                      ৮ জুন, ২০২৪ (শনিবার)
                     </h4>
                   </div>
 
@@ -181,7 +181,7 @@ const PaymentPage = () => {
                       <input
                         type="radio"
                         name="eventdate"
-                        value="25th May 10am"
+                        value="8th June 10am"
                         onChange={handleEventDate}
                         className="largerCheckbox bg_colour"
                       />
@@ -192,7 +192,7 @@ const PaymentPage = () => {
                       <input
                         type="radio"
                         name="eventdate"
-                        value="25th May 2:30pm"
+                        value="8th June 2:30pm"
                         onChange={handleEventDate}
                         className="largerCheckbox bg_colour"
                       />
@@ -202,7 +202,7 @@ const PaymentPage = () => {
 
                   <div className="short_label">
                     <h4 className="text-center fw-bold">
-                      ৩১ মে, ২০২৪ (শুক্রবার)
+                      ৯ জুন, ২০২৪ (রবিবার)
                     </h4>
                   </div>
 
@@ -210,7 +210,7 @@ const PaymentPage = () => {
                     <div className="check_item">
                       <input
                         type="radio"
-                        value="31st May 10am"
+                        value="9th June 10am"
                         name="eventdate"
                         onChange={handleEventDate}
                         className="largerCheckbox bg_colour"
@@ -221,7 +221,7 @@ const PaymentPage = () => {
                     <div className="check_item">
                       <input
                         type="radio"
-                        value="31st May 2pm"
+                        value="9th June 2pm"
                         onChange={handleEventDate}
                         name="eventdate"
                         className="largerCheckbox bg_colour"

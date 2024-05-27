@@ -1,5 +1,4 @@
 import Poster from "../assets/images/payment-notice.png";
-import Instructor from "../assets/images/instructor.jpg";
 import "../index.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -56,7 +55,6 @@ const PaymentSuccess = () => {
         <p>মোবাইল: {mobile}</p>
         <p>সিরিয়াল নাম্বার: {paymentID}</p>
         <p>সময়: {eventdate}</p>
-
         <p>ভেন্যু: মগবাজার অফিস.</p>
       </div>
 
