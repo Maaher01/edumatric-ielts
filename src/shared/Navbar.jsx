@@ -7,7 +7,7 @@ const Navbar = () => {
       <img
         className="rounded mx-5"
         height="70px"
-        src="src/assets/images/edumatric-logo.png"
+        src="./assets/images/edumatric-logo.png"
       />
     </nav>
   );

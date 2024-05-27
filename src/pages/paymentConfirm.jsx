@@ -24,6 +24,7 @@ const PaymentConfirm = () => {
     axios
       .post(`${baseUrl}/bkash/create`, {
         amount: totalbill,
+        userid: id,
       })
       .then((response) => {
         console.log("Response", response);

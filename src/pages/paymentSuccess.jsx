@@ -3,7 +3,7 @@ import "../index.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../api/api";
-
+import { Link } from "react-router-dom";
 const PaymentSuccess = () => {
   const price = "১০,০০০ > ৪৯০০ > ৩৯০০";
 
@@ -11,7 +11,7 @@ const PaymentSuccess = () => {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [eventdate, setEventDate] = useState("");
-
+  const [message, setMessage] = useState("");
   useEffect(() => {
     setPaymentID(localStorage.getItem("paymentID"));
     paymentInfo();
@@ -36,6 +36,7 @@ const PaymentSuccess = () => {
         setName(response.data.profile._name);
         setMobile(response.data.profile._mobile);
         setEventDate(response.data.profile._eventdate);
+        setMessage(response.data.profile._message);
       }
 
       localStorage.clear();
@@ -46,6 +47,9 @@ const PaymentSuccess = () => {
 
   return (
     <>
+      <h3 className="text-center mt-5">
+        <span>{message}</span>
+      </h3>
       <h1 className="text-center fw-bold mt-4" style={{ fontSize: "44px" }}>
         আপনার রেজিস্ট্রেশন সম্পন্ন হয়েছে
       </h1>
@@ -135,7 +139,7 @@ const PaymentSuccess = () => {
 
       <div className="instructor_sec">
         <div className="instructor_info">
-          <img src="src/assets/images/walidrahman.jpg" alt="instructor" />
+          <img src="./assets/images/walidrahman.jpg" alt="instructor" />
 
           <p className="text-center fw-bold pt-3 fs-5">ওয়ালিদ রহমান</p>
           <p className="text-center" style={{ fontSize: "19px" }}>
@@ -146,7 +150,7 @@ const PaymentSuccess = () => {
           <h2 className="text-center">কোর্স ইন্সট্রাক্টর হিসেবে যারা থাকছেন</h2>
         </div>
         <div className="instructor_info">
-          <img src="src/assets/images/faiz_ullah.jpg" alt="instructor" />
+          <img src="./assets/images/faiz_ullah.jpg" alt="instructor" />
 
           <p className="text-center fw-bold pt-3 fs-5">ফাইজ উল্লাহ</p>
           <p className="text-center" style={{ fontSize: "19px" }}>
@@ -196,6 +200,24 @@ const PaymentSuccess = () => {
       <h3 className="text-center text-success pb-3 mt-4">
         অথবা ফোন করুন 01709990904
       </h3>
+      <div className="d-grid text-center mb-5">
+        <Link to="/">
+          <button
+            className="btn fw-bold py-2 px-5"
+            style={{
+              background: "#c4ba0d",
+              color: "white",
+              borderRadius: "16px",
+              fontSize: "24px",
+              maxWidth: "400px",
+              margin: "auto",
+            }}
+          >
+            হোম পেজ এ ফিরে যান
+          </button>
+        </Link>
+         
+      </div>
     </>
   );
 };

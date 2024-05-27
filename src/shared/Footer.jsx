@@ -9,7 +9,7 @@ const Footer = () => {
       <div class="col mb-3">
         <img
           className="rounded mx-5"
-          src="src/assets/images/edumatric-logo.png"
+          src="./assets/images/edumatric-logo.png"
         />
       </div>
 

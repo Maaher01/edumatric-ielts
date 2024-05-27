@@ -24,7 +24,7 @@ const LandingPage = () => {
           <div className="col-md-6 col-sm-12">
             <div className="mw-100 mh-100 overflow-hidden">
               <img
-                src="src/assets/images/homepage-image.jpg"
+                src="./assets/images/homepage-image.jpg"
                 className="w-100 h-100 rounded-3"
               />
             </div>
@@ -78,7 +78,7 @@ const LandingPage = () => {
                 <div className="pb-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <img
-                      src="src/assets/images/tables-and-chairs.jpg"
+                      src="./assets/images/tables-and-chairs.jpg"
                       className="w-100 p-4 rounded"
                     />
                   </div>
@@ -114,7 +114,7 @@ const LandingPage = () => {
                 <div className="pb-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <img
-                      src="src/assets/images/girl-writing.jpg"
+                      src="./assets/images/girl-writing.jpg"
                       rounded
                       className="w-100 rounded"
                     />
@@ -202,21 +202,21 @@ const LandingPage = () => {
         {/* Instructor section */}
         <div className="instructor_sec">
           <div className="instructor_info">
-            <img src="src/assets/images/walidrahman.jpg" alt="instructor" />
+            <img src="./assets/images/walidrahman.jpg" alt="instructor" />
 
             <p className="text-center fw-bold mt-4 fs-5">ওয়ালিদ রহমান</p>
             <p className="text-center">Academic Head, Edumatric</p>
           </div>
 
           <div className="instructor_info">
-            <img src="src/assets/images/ishrakhasnain.jpg" alt="instructor" />
+            <img src="./assets/images/ishrakhasnain.jpg" alt="instructor" />
 
             <p className="text-center fw-bold mt-4 fs-5">ইশরাক হাসনাইন</p>
             <p className="text-center">Chief Co-Ordinator, Edumatric</p>
           </div>
 
           <div className="instructor_info">
-            <img src="src/assets/images/faiz_ullah.jpg" alt="instructor" />
+            <img src="./assets/images/faiz_ullah.jpg" alt="instructor" />
 
             <p className="text-center fw-bold mt-4 fs-5">ফাইজ উল্লাহ</p>
             <p className="text-center">IELTS Instructor, Edumatric</p>
