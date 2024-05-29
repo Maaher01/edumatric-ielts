@@ -1,5 +1,13 @@
 import PeoplePoster from "../assets/images/people.png";
 import MockPoster from "../assets/images/mask.png";
+
+import HomeImg from "../assets/images/homepage-image.jpg";
+import TableChair from "../assets/images/tables-and-chairs.jpg";
+import GirlWritting from "../assets/images/girl-writing.jpg";
+import Walid from "../assets/images/walidrahman.jpg";
+import Ishrak from "../assets/images/ishrakhasnain.jpg";
+import Faiz from "../assets/images/faiz_ullah.jpg";
+
 import Footer from "../shared/Footer";
 import { useRef } from "react";
 
@@ -21,32 +29,27 @@ const LandingPage = () => {
     <>
       <section className="container">
         <div className="row my-5 rounded">
-          <div className="col-md-6 col-sm-12">
+          <div className="col-md-6 col-sm-12 mb-4">
             <div className="mw-100 mh-100 overflow-hidden">
-              <img
-                src="./assets/images/homepage-image.jpg"
-                className="w-100 h-100 rounded-3"
-              />
+              <img src={HomeImg} className="w-100 h-100 rounded-3" />
             </div>
           </div>
-          <div className="col-md-6 col-sm-12 p-5">
-            <div>
-              <h2 className="fw-bold fs-1">৯৯ টাকায় মক টেস্ট!</h2>
-              <h3>এটা কি আদৌ সত্যি?</h3>
-              <div className="my-2">
-                <p className="mb-1" style={{ fontSize: "20px" }}>
-                  আমি এত কিছু জানতে চাই না
-                </p>
+          <div className="col-md-6 col-sm-12 px-5">
+            <div class="first_head">
+              <h2 className="price fw-bold">৯৯ টাকায় মক টেস্ট!</h2>
+              <p className="msg">এটা কি আদৌ সত্যি?</p>
+              <div className="my-3">
+                <p className="msg_small mb-1">আমি এত কিছু জানতে চাই না</p>
               </div>
 
               <button
-                className="btn fw-bold py-2"
+                className="btn fw-bold py-2 px-4"
                 onClick={handleFistClick}
                 style={{
                   background: "#00a651",
                   color: "white",
                   borderRadius: "16px",
-                  fontSize: "19px",
+                  fontSize: "24px",
                 }}
               >
                 রেজিস্ট্রেশন করতে চাই
@@ -57,18 +60,18 @@ const LandingPage = () => {
       </section>
 
       <section className="container">
-        <div className="row my-5 rounded">
+        <div className="row rounded">
           <div className="col-12 my-3">
-            <div className="row">
+            <div className="row proposul">
               <div className="col-12">
-                <div className="text-center mt-2 mb-5">
-                  <h2 className="fw-bold mb-3" style={{ fontSize: "2.5rem" }}>
+                <div className="text-center mt-4 mb-5">
+                  <h2 className="price fw-bold">
                     বাংলাদেশে এই প্রথম ফুল মক টেস্ট মাত্র ৯৯ টাকায়
                   </h2>
-                  <h3 className="mt-4">
+                  <p className="msg no_two">
                     এই ৯৯ টাকার মক টেস্টে আপনি পাচ্ছেন IELTS এর ৪টি মডিউলে ফুল
                     IELTS ready টেস্ট
-                  </h3>
+                  </p>
                 </div>
               </div>
             </div>
@@ -78,8 +81,8 @@ const LandingPage = () => {
                 <div className="pb-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <img
-                      src="./assets/images/tables-and-chairs.jpg"
-                      className="w-100 p-4 rounded"
+                      src={TableChair}
+                      className="table_chair w-100 rounded"
                     />
                   </div>
                 </div>
@@ -96,10 +99,7 @@ const LandingPage = () => {
                 >
                   <div className="">
                     <div className="card-body fs-5">
-                      <p
-                        className="card-text big_p px-2"
-                        style={{ fontSize: "1.75rem" }}
-                      >
+                      <p className="msg sale card-text px-2">
                         বাংলাদেশে শুধুমাত্র Edumatric এই পাবেন ৯৯ টাকায় মক
                         টেস্ট।
                       </p>
@@ -113,11 +113,7 @@ const LandingPage = () => {
               <div className="col-lg-6 col-sm-12">
                 <div className="pb-3">
                   <div className="d-flex align-items-center justify-content-center">
-                    <img
-                      src="./assets/images/girl-writing.jpg"
-                      rounded
-                      className="w-100 rounded"
-                    />
+                    <img src={GirlWritting} rounded className="w-100 rounded" />
                   </div>
                 </div>
               </div>
@@ -133,10 +129,7 @@ const LandingPage = () => {
                 >
                   <div className="">
                     <div className="card-body fs-5">
-                      <p
-                        className="card-text big_p px-2"
-                        style={{ fontSize: "1.75rem" }}
-                      >
+                      <p className="msg sale card-text big_p px-2">
                         Edumatric এ মক টেস্ট দেয়ার জন্য থাকছে বাংলাদেশের
                         সবচেয়ে প্রিমিয়াম মক ভেন্যু যা ব্রিটিশ কাউন্সিল দ্বারা
                         স্বীকৃত
@@ -151,12 +144,12 @@ const LandingPage = () => {
       </section>
 
       <section className="container">
-        <div className="row my-5 rounded">
-          <div className="col-12 my-3">
-            <div className="row">
+        <div className="row  rounded">
+          <div className="col-12">
+            <div className="row proposul__2">
               <div className="col-12">
-                <div className="text-center mt-2 mb-5">
-                  <h2 className="fw-bold mb-3" style={{ fontSize: "2rem" }}>
+                <div className="text-center mt-5">
+                  <h2 className="msg fw-bold mb-3">
                     আমাদের মক টেস্ট ভেন্যুতে আপনি যা যা পাচ্ছেন
                   </h2>
                 </div>
@@ -166,19 +159,19 @@ const LandingPage = () => {
 
           <div className="facility__container">
             <div className="facility_item">
-              <h3>একদম IELTS এর মত পরিবেশ</h3>
+              <h3 className="font">একদম IELTS এর মত পরিবেশ</h3>
             </div>
             <div className="facility_item">
-              <h3>ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)</h3>
+              <h3 className="font">ওয়ারলেস হেডফোন (ব্রিটিশ কাউন্সিল এর মত)</h3>
             </div>
           </div>
 
           <div className="facility__container">
             <div className="facility_item">
-              <h3>পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন</h3>
+              <h3 className="font">পারফেক্ট গাইড যিনি মক কন্ডাক্ট করবেন</h3>
             </div>
             <div className="facility_item">
-              <h3>আপনার IELTS ব্যান্ড স্কোর</h3>
+              <h3 className="font">আপনার IELTS ব্যান্ড স্কোর</h3>
             </div>
           </div>
         </div>
@@ -189,8 +182,8 @@ const LandingPage = () => {
           <div className="col-lg-12 col-md-12  col-sm-12 col-xs-12">
             <div className="row">
               <div className="col-lg-12 col-md-12">
-                <div className="text-center my-4">
-                  <h2 className="fw-bold" style={{ fontSize: "2.5rem" }}>
+                <div className="text-center">
+                  <h2 className="price fw-bold">
                     যারা যারা থাকবেন আপনার মক <br /> টেস্ট এর জন্য
                   </h2>
                 </div>
@@ -200,47 +193,55 @@ const LandingPage = () => {
         </div>
 
         {/* Instructor section */}
-        <div className="instructor_sec">
-          <div className="instructor_info">
-            <img src="./assets/images/walidrahman.jpg" alt="instructor" />
+        <div className="instructor_wrap">
+          <div className="instructor_sec proposul">
+            <div className="instructor_info">
+              <img src={Walid} alt="instructor" />
 
-            <p className="text-center fw-bold mt-4 fs-5">ওয়ালিদ রহমান</p>
-            <p className="text-center">Academic Head, Edumatric</p>
-          </div>
+              <div className="instructor__content">
+                <p className="text-center fw-bold mt-4">ওয়ালিদ রহমান</p>
+                <p className="text-center">Academic Head, Edumatric</p>
+              </div>
+            </div>
 
-          <div className="instructor_info">
-            <img src="./assets/images/ishrakhasnain.jpg" alt="instructor" />
+            <div className="instructor_info">
+              <img src={Ishrak} alt="instructor" />
 
-            <p className="text-center fw-bold mt-4 fs-5">ইশরাক হাসনাইন</p>
-            <p className="text-center">Chief Co-Ordinator, Edumatric</p>
-          </div>
+              <div className="instructor__content">
+                <p className="text-center fw-bold mt-4">ইশরাক হাসনাইন</p>
+                <p className="text-center">Chief Co-Ordinator, Edumatric</p>
+              </div>
+            </div>
 
-          <div className="instructor_info">
-            <img src="./assets/images/faiz_ullah.jpg" alt="instructor" />
+            <div className="instructor_info">
+              <img src={Faiz} alt="instructor" />
 
-            <p className="text-center fw-bold mt-4 fs-5">ফাইজ উল্লাহ</p>
-            <p className="text-center">IELTS Instructor, Edumatric</p>
+              <div className="instructor__content">
+                <p className="text-center fw-bold mt-4">ফাইজ উল্লাহ</p>
+                <p className="text-center">IELTS Instructor, Edumatric</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <h2 className="text-center pb-3" style={{ paddingTop: "72px" }}>
+      <p className="full_mock text-center">
         Edumatric এর Full Mock Test
         <span className="fw-bold"> এর মূল্য ৫০০ টাকা</span>
-      </h2>
+      </p>
 
-      <h1 className="text-center pb-3 d-flex flex-column">
+      <h2 className="price text-center pb-3 d-flex flex-column">
         কিন্তু বিশেষ প্রমোশনাল প্রাইসে <br />
         <span className="fw-bold mt-2"> আপনি পাচ্ছেন মাত্র ৯৯ টাকায়</span>
-      </h1>
+      </h2>
 
       <div className="people_poster">
         <img src={PeoplePoster} alt="poster" />
       </div>
 
-      <h1 className="text-center fw-bold pt-3" ref={secondBtn}>
+      <h2 className="price text-center fw-bold" ref={secondBtn}>
         ফ্রি মক টেস্ট vs Edumatric এর <br /> মক টেস্ট
-      </h1>
+      </h2>
 
       <div className="test__container">
         {/* <div className="test__item">
@@ -251,13 +252,13 @@ const LandingPage = () => {
         </div> */}
 
         <div className="test__item">
-          <h3 className="text-center" style={{ fontSize: "26px" }}>
+          <h3 className="facility_item text-center font">
             Main IELTS এ যে ধরনের পরিবেশ পাবেন Edumatric এও একই রকম পরিবেশ পাবেন
           </h3>
         </div>
 
         <div className="test__item">
-          <h3 className="text-center" style={{ fontSize: "26px" }}>
+          <h3 className="facility_item text-center font">
             এখানে দক্ষ এবং অভিজ্ঞ এক্সপার্ট দ্বারা কপি চেক করানো হয় তাই - মক এর
             রেজাল্ট ঠিক IELTS এর রেজাল্ট এর মতই হয়
           </h3>
@@ -272,19 +273,16 @@ const LandingPage = () => {
             background: "#00a651",
             color: "white",
             borderRadius: "16px",
-            fontSize: "20px",
+            fontSize: "24px",
           }}
         >
           রেজিস্ট্রেশন করতে চাই
         </button>
       </div>
 
-      <h1
-        className="text-center fw-bold"
-        style={{ paddingTop: "36px", fontSize: "46px" }}
-      >
+      <h2 className="price text-center fw-bold" style={{ marginTop: "50px" }}>
         এই অফারে মক টেস্ট নিলে <br /> আরো যে সকল সুবিধা পাচ্ছেন
-      </h1>
+      </h2>
 
       <div className="mock__test mt-5">
         <div className="mock__poster">
@@ -292,11 +290,15 @@ const LandingPage = () => {
         </div>
         <div className="mock__content">
           <div className="test__item">
-            <h3>মাত্র ১০০ টাকায় IELTS Masterclass</h3>
+            <h3 className="facility_item font">
+              মাত্র ১০০ টাকায় IELTS Masterclass
+            </h3>
           </div>
 
           <div className="test__item">
-            <h3>৩ মাসের IELTS course এ ১০০০ টাকা Instant cashback</h3>
+            <h3 className="facility_item font">
+              ৩ মাসের IELTS course এ ১০০০ টাকা Instant cashback
+            </h3>
           </div>
 
           {/* <div className="test__item">
@@ -306,8 +308,8 @@ const LandingPage = () => {
       </div>
 
       <h2
-        className="text-center fw-bold mt-5"
-        style={{ fontSize: "46px" }}
+        className="price text-center fw-bold"
+        style={{ marginTop: "20px" }}
         ref={thirdBtn}
       >
         যাদের বন্ধুর সংখ্যা বেশি তাদের <br /> জন্য যা যা থাকছে
@@ -315,21 +317,21 @@ const LandingPage = () => {
 
       <div className="test__container mt-5">
         <div className="test__item">
-          <h3 className="text-center" style={{ fontSize: "30px" }}>
+          <h3 className="facility_item text-center font">
             ৩ জন একসাথে রেজিস্ট্রেশন করলে অতিরিক্ত ১ জন ফ্রি মক টেস্ট দিতে
             পারবেন
           </h3>
         </div>
 
         <div className="test__item">
-          <h3 className="text-center" style={{ fontSize: "30px" }}>
+          <h3 className="facility_item text-center font">
             ৩ জন একসাথে রেজিস্ট্রেশন করলে অতিরিক্ত বন্ধু সহ মোট ৪ জন ফ্রি master
             class এ জয়েন করতে পারবেন
           </h3>
         </div>
 
         <div className="test__item">
-          <h3 className="text-center" style={{ fontSize: "30px" }}>
+          <h3 className="facility_item text-center font">
             এ অফার পাবার জন্য অবশ্যই আমাদের হটলাইনে ফোন দিয়ে কনফার্ম করতে হবে
           </h3>
         </div>
@@ -359,17 +361,15 @@ const LandingPage = () => {
         <div className="venue__sec">
           <h2 className="fw-bold">Mock Venue</h2>
           <p className="fs-4">
-            Mogbajar Address <br /> Location: Greenland Tower, Level 4, 26
-            Shahid Sangbadik Selina Parvin Road, Moghbazar, Dhaka 1217, (beside
-            siddheswari college)
+            Greenland Tower, Level 4, 26 Shahid Sangbadik Selina Parvin Road,
+            Moghbazar, Dhaka-1217, (beside siddheswari college)
             <br /> Phone number: 01709990904
           </p>
         </div>
         <div className="office__sec">
           <h2 className="fw-bold">Head Office</h2>
           <p className="fs-4">
-            Gulshan Address <br /> Location: 1 Gulshan Avenue, Gulshan-1,
-            Dhaka-1212, Bangladesh.
+            1 Gulshan Avenue, Gulshan-1, Dhaka-1212.
             <br />
             Phone number: +88024881021017
           </p>
@@ -531,6 +531,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </>
   );
