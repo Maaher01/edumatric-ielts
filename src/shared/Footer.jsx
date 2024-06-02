@@ -9,7 +9,7 @@ const Footer = () => {
         </div>
         <div className="footer__content">
           <div className="first__content">
-            <h5 className="fw-bold">Mock Venu</h5>
+            <h5 className="fw-bold">Mock Venue</h5>
             <p className="text-body-secondary">
               Greenland Tower, Level 4, 26 Shahid Sangbadik Selina Parvin Road,
               Moghbazar, Dhaka 1217, (beside siddheswari college) <br /> Phone

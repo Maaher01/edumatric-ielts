@@ -149,7 +149,7 @@ input[type="contact_number"] {
   justify-content: space-between;
   max-width: 450px;
   height: 70px;
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 
 .check_item {
