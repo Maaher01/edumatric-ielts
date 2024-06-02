@@ -26,8 +26,6 @@ const paymentFail = () => {
         setMessage(response.data.profile._message);
       }
 
-      //localStorage.clear();
-
       // localStorage.clear();
     } catch (error) {
       console.error("There was an error:", error);
@@ -37,7 +35,7 @@ const paymentFail = () => {
   return (
     <>
       <h3 className="mt-5 text-center">{message}</h3>
-      <h1 className="text-center fw-bold mt-5" style={{ fontSize: "44px" }}>
+      <h1 className="text-center fw-bold mt-5">
         দুঃখিত আপনার রেজিস্ট্রেশনটি সম্পূর্ণ হয়নি, অনুগ্রহ করে পুনরায় চেষ্টা
         করুন।
       </h1>

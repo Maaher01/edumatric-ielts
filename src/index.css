@@ -164,6 +164,7 @@ input[type="contact_number"] {
 .check_item p {
   padding-top: 15px;
   font-size: 20px;
+  font-family: "sans-serif";
 }
 
 input.largerCheckbox {
@@ -198,7 +199,9 @@ input.largerCheckbox {
 
 .content_label p {
   font-size: 20px;
-  color: rgba(117, 117, 117, 1);
+  color: #757575;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 
 .label_sec {
@@ -228,8 +231,14 @@ input.largerCheckbox {
   padding: 30px 20px;
 }
 
+.check_label p {
+  margin-bottom: 0px;
+  color: #757575;
+  font-weight: 500;
+}
+
 .amount_container {
-  max-width: 500px;
+  max-width: 675px;
   margin: 20px auto;
   height: 30px;
   display: flex;
@@ -240,8 +249,10 @@ input.largerCheckbox {
   justify-content: flex-end;
   flex: 2;
   height: 30px;
-  padding-right: 20px;
-  font-size: 18px;
+  padding-right: 12px;
+  font-size: 23px;
+  color: #757575;
+  font-weight: 900;
 }
 
 .amount_container > .amount_price {
@@ -294,6 +305,9 @@ input.largerCheckbox {
   margin: auto;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 64px;
+  font-size: 44px;
+  font-weight: 900;
 }
 
 .short_level_two {
@@ -339,8 +353,8 @@ input.largerCheckbox {
 }
 
 .course_module ul li {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   font-family: serif;
 }
 
@@ -363,6 +377,10 @@ input.largerCheckbox {
   max-width: 400px;
   height: 200px;
   line-height: 10px;
+}
+
+.instructor_info p {
+  font-size: 19px;
 }
 
 .instructor_info img {
@@ -410,8 +428,12 @@ input.largerCheckbox {
   margin-bottom: 90px;
 }
 
+.schedule h2 {
+  font-size: 48px;
+}
+
 .schedule p {
-  font-size: 20px;
+  font-size: 28px;
   font-family: sans-serif;
   padding-top: 20px;
   font-weight: 700;

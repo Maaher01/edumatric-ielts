@@ -223,7 +223,7 @@ const PaymentPage = () => {
                           value="8th June 10am"
                           className="largerCheckbox bg_colour"
                         />
-                        <p style={{ fontFamily: "sans-serif" }}>সকাল ১০ টা </p>
+                        <p>সকাল ১০ টা </p>
                       </div>
 
                       <div className="check_item">
@@ -233,9 +233,7 @@ const PaymentPage = () => {
                           value="8th June 2:30pm"
                           className="largerCheckbox bg_colour"
                         />
-                        <p style={{ fontFamily: "sans-serif" }}>
-                          দুপুর ২:৩০ টা{" "}
-                        </p>
+                        <p>দুপুর ২:৩০ টা </p>
                       </div>
                     </div>
 
@@ -253,7 +251,7 @@ const PaymentPage = () => {
                           name="eventdate"
                           className="largerCheckbox bg_colour"
                         />
-                        <p style={{ fontFamily: "sans-serif" }}>সকাল ১০ টা </p>
+                        <p>সকাল ১০ টা </p>
                       </div>
 
                       <div className="check_item">
@@ -263,7 +261,7 @@ const PaymentPage = () => {
                           name="eventdate"
                           className="largerCheckbox bg_colour"
                         />
-                        <p style={{ fontFamily: "sans-serif" }}>দুপুর ২ টা </p>
+                        <p>দুপুর ২ টা </p>
                       </div>
                     </div>
 

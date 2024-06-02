@@ -50,7 +50,7 @@ const PaymentSuccess = () => {
       <h3 className="text-center mt-5">
         <span>{message}</span>
       </h3>
-      <h1 className="text-center fw-bold mt-4" style={{ fontSize: "44px" }}>
+      <h1 className="text-center fw-bold mt-4">
         আপনার রেজিস্ট্রেশন সম্পন্ন হয়েছে
       </h1>
 
@@ -101,74 +101,41 @@ const PaymentSuccess = () => {
         </div>
       </div>
 
-      <h2
-        className="text-center short_level_one"
-        style={{ fontWeight: "900", fontSize: "44px", marginTop: "64px" }}
-      >
+      <h2 className="text-center short_level_one">
         যা যা থাকছে ৩ মাসের IELTS course এ যা যা থাকছে
       </h2>
 
       <div className="course_module">
         <ul>
-          <li style={{ fontSize: "30px", fontWeight: "500" }}>
-            {" "}
-            - ৩ মাসে complete IELTS preparation
-          </li>
-          <li style={{ fontSize: "30px", fontWeight: "500" }}>
-            {" "}
-            - ৪২ টি ক্লাস
-          </li>
-          <li style={{ fontSize: "30px", fontWeight: "500" }}>
-            {" "}
-            - ৪ টি মডিউলে ক্লাস
-          </li>
-          <li style={{ fontSize: "30px", fontWeight: "500" }}>
-            {" "}
-            - ফ্রি স্পিকিং কোর্স (আলাদা)
-          </li>
-          <li style={{ fontSize: "30px", fontWeight: "500" }}>
-            {" "}
-            - ইংলিশ ফাউন্ডেশন কোর্স
-          </li>
-          <li style={{ fontSize: "30px", fontWeight: "500" }}>
-            {" "}
-            - ১ টি মক টেস্ট
-          </li>
+          <li> - ৩ মাসে complete IELTS preparation</li>
+          <li> - ৪২ টি ক্লাস</li>
+          <li> - ৪ টি মডিউলে ক্লাস</li>
+          <li> - ফ্রি স্পিকিং কোর্স (আলাদা)</li>
+          <li> - ইংলিশ ফাউন্ডেশন কোর্স</li>
+          <li> - ১ টি মক টেস্ট</li>
         </ul>
       </div>
 
       <div className="instructor_sec">
         <div className="instructor_info">
-          <img src="./assets/images/walidrahman.jpg" alt="instructor" />
-
+          <img src="src/assets/images/walidrahman.jpg" alt="instructor" />
           <p className="text-center fw-bold pt-3 fs-5">ওয়ালিদ রহমান</p>
-          <p className="text-center" style={{ fontSize: "19px" }}>
-            Academic Head, Edumatric
-          </p>
+          <p className="text-center">Academic Head, Edumatric</p>
         </div>
         <div className="info_text">
           <h2 className="text-center">কোর্স ইন্সট্রাক্টর হিসেবে যারা থাকছেন</h2>
         </div>
         <div className="instructor_info">
-          <img src="./assets/images/faiz_ullah.jpg" alt="instructor" />
-
+          <img src="src/assets/images/faiz_ullah.jpg" alt="instructor" />
           <p className="text-center fw-bold pt-3 fs-5">ফাইজ উল্লাহ</p>
-          <p className="text-center" style={{ fontSize: "19px" }}>
-            IELTS Instructor, Edumatric
-          </p>
+          <p className="text-center">IELTS Instructor, Edumatric</p>
         </div>
       </div>
 
       <div className="schedule">
-        <h2 className="text-center" style={{ fontSize: "48px" }}>
-          ক্লাস শুরু হচ্ছে
-        </h2>
-        <p className="text-center fw-light" style={{ fontSize: "28px" }}>
-          ১ জুন, ২০২৪
-        </p>
-        <p className="text-center fw-light" style={{ fontSize: "28px" }}>
-          ২ জুন, ২০২৪
-        </p>
+        <h2 className="text-center">ক্লাস শুরু হচ্ছে</h2>
+        <p className="text-center fw-light">১ জুন, ২০২৪</p>
+        <p className="text-center fw-light">২ জুন, ২০২৪</p>
       </div>
 
       <h2 className="text-center fw-bold" style={{ fontSize: "38px" }}>
