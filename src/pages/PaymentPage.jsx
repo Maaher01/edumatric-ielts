@@ -2,16 +2,70 @@ import axios from "axios";
 import { baseUrl } from "../api/api";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import { paymentFormSchema } from "../schema";
+import { format } from "date-fns";
 
 const PaymentPage = () => {
   const navigate = useNavigate();
+  const [dates, setDates] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    fetchDates();
   }, []);
+
+  const fetchDates = async () => {
+    try {
+      const response = await axios.get(`${baseUrl}/mockdate`);
+      const data = await response.data.data.data;
+      const activeDates = data.filter((date) => date._status === 1);
+
+      // Fetch capacities and student counts for each active date
+      const filteredDates = await Promise.all(
+        activeDates.map(async (date) => {
+          const capacity = await fetchStudentCapacityByEventId(date.id);
+          const studentCount = await fetchStudentCountOnADate(date.id);
+
+          if (studentCount < capacity) {
+            return date;
+          } else {
+            return null;
+          }
+        })
+      );
+
+      // Filter out null values
+      setDates(filteredDates.filter((date) => date !== null));
+    } catch (error) {
+      console.error("Error fetching mock dates:", error);
+    }
+  };
+
+  const fetchStudentCapacityByEventId = async (id) => {
+    try {
+      const response = await axios.get(`${baseUrl}/mockcapacity/event/${id}`);
+      const data = response.data.data;
+      return data._capacity;
+    } catch (error) {
+      console.error("Error fetching student count:", error);
+      return 0;
+    }
+  };
+
+  const fetchStudentCountOnADate = async (id) => {
+    try {
+      const response = await axios.get(
+        `${baseUrl}/studentinfo/studentcount/${id}`
+      );
+      const data = await response.data;
+      return data.student_count;
+    } catch (error) {
+      console.error("Error fetching student count:", error);
+      return 0;
+    }
+  };
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
@@ -33,6 +87,20 @@ const PaymentPage = () => {
       setSubmitting(false);
     }
   };
+
+  // Group dates by date part
+  const groupDatesByDatePart = (dates) => {
+    return dates.reduce((acc, date) => {
+      const datePart = format(new Date(date._datetime), "yyyy-MM-dd");
+      if (!acc[datePart]) {
+        acc[datePart] = [];
+      }
+      acc[datePart].push(date);
+      return acc;
+    }, {});
+  };
+
+  const groupedDates = groupDatesByDatePart(dates);
 
   return (
     <section className="container">
@@ -72,6 +140,7 @@ const PaymentPage = () => {
                           className="form-control"
                           name="name"
                           placeholder="আপনার নাম"
+                          disabled={dates.length === 0}
                         />
                         <ErrorMessage
                           name="name"
@@ -87,6 +156,7 @@ const PaymentPage = () => {
                           className="form-control"
                           name="mobile"
                           placeholder="WhatsApp Number"
+                          disabled={dates.length === 0}
                         />
                         <ErrorMessage
                           name="mobile"
@@ -102,6 +172,7 @@ const PaymentPage = () => {
                           className="form-control"
                           name="email"
                           placeholder="Email Address"
+                          disabled={dates.length === 0}
                         />
                         <ErrorMessage
                           name="email"
@@ -118,6 +189,7 @@ const PaymentPage = () => {
                           name="district"
                           placeholder="জেলা"
                           style={{ backgroundColor: "#f5f5f5" }}
+                          disabled={dates.length === 0}
                         >
                           <option value="">জেলা নির্বাচন করুন</option>
                           <option value="Dhaka">ঢাকা</option>
@@ -199,6 +271,7 @@ const PaymentPage = () => {
                           className="form-control"
                           name="location"
                           placeholder="আপনার লোকেশন"
+                          disabled={dates.length === 0}
                         />
                         <ErrorMessage
                           name="location"
@@ -208,91 +281,86 @@ const PaymentPage = () => {
                       </div>
                     </div>
 
-                    <h2 className="text-center mt-5">সময় বেছে নিন</h2>
-                    <div className="short_label">
-                      <h4 className="text-center fw-bold">
-                        ৮ জুন, ২০২৪ (শনিবার)
-                      </h4>
-                    </div>
-
-                    <div className="check_list">
-                      <div className="check_item">
-                        <Field
-                          type="radio"
+                    {dates.length > 0 ? (
+                      <>
+                        <h2 className="text-center mt-5">সময় বেছে নিন</h2>
+                        {Object.keys(groupedDates).map((datePart) => (
+                          <div key={datePart}>
+                            <div className="short_label">
+                              <h4 className="text-center fw-bold">
+                                {format(
+                                  new Date(datePart),
+                                  "do MMMM, y (cccc)"
+                                )}
+                              </h4>
+                            </div>
+                            <div
+                              className="d-flex justify-content-center"
+                              style={{ gap: "11rem" }}
+                            >
+                              {groupedDates[datePart].map((date, index) => (
+                                <div className="check_list" key={index}>
+                                  <div className="check_item">
+                                    <Field
+                                      type="radio"
+                                      name="eventdate"
+                                      value={date._datetime}
+                                      className="largerCheckbox bg_colour"
+                                    />
+                                    <p>
+                                      {format(
+                                        new Date(date._datetime),
+                                        "hh:mm aaa"
+                                      )}
+                                    </p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                        <ErrorMessage
                           name="eventdate"
-                          value="8th June 10am"
-                          className="largerCheckbox bg_colour"
+                          component="div"
+                          className="text-danger text-center fs-5 mb-4 mt-2"
                         />
-                        <p>সকাল ১০ টা </p>
-                      </div>
 
-                      <div className="check_item">
-                        <Field
-                          type="radio"
-                          name="eventdate"
-                          value="8th June 2:30pm"
-                          className="largerCheckbox bg_colour"
-                        />
-                        <p>দুপুর ২:৩০ টা </p>
-                      </div>
-                    </div>
+                        <div className="row justify-content-center mt-2">
+                          <div className="col-md-7">
+                            <h4 className="text-center">
+                              রিডিং, রাইটিং এবং লিসেনিং শেষ হবার পর স্পিকিং নেয়া
+                              হবে
+                            </h4>
+                          </div>
+                        </div>
 
-                    <div className="short_label">
-                      <h4 className="text-center fw-bold">
-                        ৯ জুন, ২০২৪ (রবিবার)
-                      </h4>
-                    </div>
-
-                    <div className="check_list">
-                      <div className="check_item">
-                        <Field
-                          type="radio"
-                          value="9th June 10am"
-                          name="eventdate"
-                          className="largerCheckbox bg_colour"
-                        />
-                        <p>সকাল ১০ টা </p>
-                      </div>
-
-                      <div className="check_item">
-                        <Field
-                          type="radio"
-                          value="9th June 2pm"
-                          name="eventdate"
-                          className="largerCheckbox bg_colour"
-                        />
-                        <p>দুপুর ২ টা </p>
-                      </div>
-                    </div>
-
-                    <ErrorMessage
-                      name="eventdate"
-                      component="div"
-                      className="text-danger text-center fs-5 mb-4 mt-2"
-                    />
-
-                    <div className="row justify-content-center mt-2">
-                      <div className="col-md-7">
-                        <h4 className="text-center">
-                          রিডিং, রাইটিং এবং লিসেনিং শেষ হবার পর স্পিকিং নেয়া হবে
+                        <div className="register_confirm d-grid mt-5">
+                          <button
+                            type="submit"
+                            className="btn fw-bold py-2 px-5"
+                            style={{
+                              background: "#00a651",
+                              color: "white",
+                              borderRadius: "16px",
+                              fontSize: "18px",
+                            }}
+                          >
+                            রেজিস্ট্রেশন কনফার্ম করুন
+                          </button>
+                        </div>
+                      </>
+                    ) : (
+                      <div
+                        className="text-center text-danger mt-5"
+                        style={{ margin: "0 100px" }}
+                      >
+                        <h4>
+                          Thank you for your attempt. Seats for all Mock tests
+                          are currently booked. Please keep an eye on our
+                          Facebook page for the next schedule.
                         </h4>
                       </div>
-                    </div>
-
-                    <div className="register_confirm d-grid mt-5">
-                      <button
-                        type="submit"
-                        className="btn fw-bold py-2 px-5"
-                        style={{
-                          background: "#00a651",
-                          color: "white",
-                          borderRadius: "16px",
-                          fontSize: "18px",
-                        }}
-                      >
-                        রেজিস্ট্রেশন কনফার্ম করুন
-                      </button>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>

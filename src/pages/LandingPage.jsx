@@ -35,7 +35,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="col-md-6 col-sm-12 px-5">
-            <div class="first_head">
+            <div className="first_head">
               <h2 className="price fw-bold">৯৯ টাকায় মক টেস্ট!</h2>
               <p className="msg">এটা কি আদৌ সত্যি?</p>
               <div className="my-3">

@@ -8,7 +8,7 @@ import { ClipLoader } from "react-spinners";
 const PaymentConfirm = () => {
   const { id } = useParams();
 
-  const [masterClassChecked, setMasterClassChecked] = useState(true);
+  const [masterClassChecked, setMasterClassChecked] = useState(false);
   const [totalbill, setTotalBill] = useState(0);
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +52,7 @@ const PaymentConfirm = () => {
           <p>99 Taka</p>
         </div>
 
-        <div className="content_check">
+        {/* <div className="content_check">
           <input
             type="checkbox"
             className="largerCheckbox"
@@ -64,7 +64,7 @@ const PaymentConfirm = () => {
             <p>Master Class</p>
             <p>100 Taka</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="amount_container text-center my-5">

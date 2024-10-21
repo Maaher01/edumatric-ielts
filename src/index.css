@@ -127,7 +127,7 @@ input[type="contact_number"] {
 .short_label {
   height: 60px;
   max-width: 450px;
-  margin: 20px auto;
+  margin: 0px auto;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -146,10 +146,10 @@ input[type="contact_number"] {
 
 .check_list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 450px;
   height: 70px;
-  margin: 20px auto 0;
+  margin: 0 auto 20px;
 }
 
 .check_item {
